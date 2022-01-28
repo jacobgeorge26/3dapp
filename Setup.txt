@@ -1,0 +1,6 @@
+Setup 3dapp:
+
+Filezilla
+	Host: sftp://unix.sussex.ac.uk
+	Username & password same as uni
+	Port: 22
