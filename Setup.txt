@@ -4,3 +4,16 @@ Filezilla
 	Host: sftp://unix.sussex.ac.uk
 	Username & password same as uni
 	Port: 22
+	
+MAMP: Update link to correct folder
+	
+Local: http://127.0.0.1/lab1/
+Remote: https://users.sussex.ac.uk/~mb791/3dapp/labs/lab1/
+
+
+
+Questions:
+- can't get navbar button to work
+- how to install instantlab
+- how to export texture
+- html file different on local vs remote
