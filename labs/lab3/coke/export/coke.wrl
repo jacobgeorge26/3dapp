@@ -1,13 +1,13 @@
 #VRML V2.0 utf8
 
 # Produced by 3D Studio MAX VRML97 exporter, Version 24.03, Revision 34.04
-# MAX File: coke_can - Copy.max, Date: Fri Mar  4 15:37:35 2022
+# MAX File: coke_can.max, Date: Fri Mar  4 15:32:31 2022
 
-DEF Camera001 Viewpoint {
-  position 184.2 200 3.67
-  orientation 0.3339 -0.8763 -0.3474 -1.742
+DEF Camera002 Viewpoint {
+  position 219.4 6.581 161.7
+  orientation -0.1738 -0.9818 0.07652 -0.8432
   fieldOfView 0.6024
-  description "Camera001"
+  description "Camera002"
 }
 DEF NavInfo001 NavigationInfo {
   avatarSize [0.25, 1.6, 0.75]
@@ -21,34 +21,34 @@ DEF Omni002 PointLight {
   color 1 1 1
   location 42.44 71.74 -4.24
   on TRUE
-  radius 442
+  radius 467.3
 }
 DEF Omni005 PointLight {
   intensity 0.5
   color 1 1 1
   location 2.821 71.74 37.43
   on TRUE
-  radius 442
+  radius 467.3
 }
 DEF Omni008 PointLight {
   intensity 0.5
   color 1 1 1
   location -33.22 71.74 0.3612
   on TRUE
-  radius 442
+  radius 467.3
 }
 DEF Omni011 PointLight {
   intensity 0.5
   color 1 1 1
   location 5.122 80.05 -33.13
   on TRUE
-  radius 442
+  radius 467.3
 }
-DEF Camera002 Viewpoint {
-  position 215.4 6.651 166.1
-  orientation -0.1738 -0.9818 0.07652 -0.8432
+DEF Camera001 Viewpoint {
+  position 184.2 200 3.67
+  orientation 0.3339 -0.8763 -0.3474 -1.742
   fieldOfView 0.6024
-  description "Camera002"
+  description "Camera001"
 }
 DEF Camera003 Viewpoint {
   position -2.179 208.9 -0.8051
@@ -57,10 +57,35 @@ DEF Camera003 Viewpoint {
   description "Camera003"
 }
 DEF CokeCan Transform {
-  translation 0 2 0
-  rotation 0 -1 0 -1.934
+  translation 86.62 5.278 -71.72
+  rotation 0 1 0 -0.0002271
   scale 0.5517 0.5517 0.5517
   children [
+  DEF CokeCan-TIMER TimeSensor { loop FALSE cycleInterval 3.333 },
+  DEF CokeCan-POS-INTERP PositionInterpolator {
+    key [0, 0.03, 0.06, 0.09, 0.12, 0.15, 0.18, 0.21, 0.24, 0.27, 0.3, 
+        0.33, 0.36, 0.39, 0.42, 0.45, 0.48, 0.51, ]
+    keyValue [86.62 5.278 -71.72, 73.3 5.278 -58.4, 59.61 5.278 -43.57, 
+      45.95 5.278 -29.35, 35.08 5.278 -20.65, 25.05 5.278 -14.07, 
+      16.56 5.278 -8.78, 10.63 5.278 -4.505, 7.439 5.278 -1.21, 
+      6.172 5.278 0.9074, 5.946 5.278 1.656, 5.946 8.043 1.656, 
+      5.946 14.86 1.656, 5.946 23.52 1.656, 5.946 31.82 1.656, 
+      5.946 37.53 1.656, 5.946 30.12 1.656, 5.946 5.278 1.656, 
+      ] },
+  DEF CokeCan-ROT-INTERP OrientationInterpolator {
+    key [0, 0.03, 0.06, 0.09, 0.12, 0.15, 0.18, 0.21, 0.24, 0.27, 0.3, 
+        0.33, 0.36, 0.39, 0.42, 0.45, 0.48, 0.51, 0.54, 0.57, 0.6, 
+        0.63, 0.66, 0.69, 0.72, 0.75, 0.78, 0.81, 0.84, 0.87, 0.9, 
+        ]
+    keyValue [0 1 0 -0.0002271, 0 1 0 -0.00361, 0 1 0 -0.01098, 
+      0 1 0 -0.02226, 0 1 0 -0.03737, 0 1 0 -0.05622, 0 1 0 -0.07874, 
+      0 1 0 -0.1048, 0 1 0 -0.1345, 0 1 0 -0.1675, 0 1 0 -0.2038, 
+      0 1 0 -0.2435, 0 1 0 -0.2863, 0 1 0 -0.3322, 0 1 0 -0.3811, 
+      0 1 0 -0.433, 0 1 0 -0.4877, 0 1 0 -0.5452, 0 1 0 -0.6053, 
+      0 1 0 -0.6681, 0 1 0 -0.7334, 0 1 0 -0.8929, 0 1 0 -1.175, 
+      0 1 0 -1.483, 0 1 0 -1.748, 0 1 0 -2.008, 0 -1 0 -4.001, 
+      0 -1 0 -3.69, 0 -1 0 -3.256, 0 -1 0 -2.847, 0 -1 0 -2.665, 
+      ] },
     Shape {
       appearance Appearance {
         material Material {
@@ -1959,5 +1984,11 @@ DEF CokeCan Transform {
           -1, 459, 459, 459, -1, 459, 459, 459, -1, ]
         }
     }
+DEF CokeSensor-SENSOR TouchSensor { enabled TRUE }
   ]
+ROUTE CokeCan-TIMER.fraction_changed TO CokeCan-POS-INTERP.set_fraction
+ROUTE CokeCan-POS-INTERP.value_changed TO CokeCan.set_translation
+ROUTE CokeCan-TIMER.fraction_changed TO CokeCan-ROT-INTERP.set_fraction
+ROUTE CokeCan-ROT-INTERP.value_changed TO CokeCan.set_rotation
 }
+ROUTE CokeSensor-SENSOR.touchTime TO CokeCan-TIMER.startTime
