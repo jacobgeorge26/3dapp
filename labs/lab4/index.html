@@ -22,7 +22,7 @@ to-fit=no">
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
 <title>Lab 4</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">   
         <div class="container">
             <ul class="logo me-auto">
@@ -45,17 +45,16 @@ to-fit=no">
             <div class="collapse navbar-collapse ms-auto" aria-expanded="false" style="height: 1px;">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item ms-auto">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item ms-auto">
                         <a class="nav-link" href="#">About</a>
                     </li>
-    
                     <li class="nav-item dropdown ms-auto">
                         <a class="nav-link dropdown-toggle" href='#' id="navbardrop" data-toggle="dropdown" aria-expanded="false">
                         Drinks
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbardrop">
+                        <ul class="dropdown-menu dropdown-menu-bottom" aria-labelledby="navbardrop">
                         <li><a class="dropdown-item" href="#">Coca Cola</a></li>
                         <li><a class="dropdown-item" href="#">Sprite</a></li>
                         <li><a class="dropdown-item" href="#">Dr Pepper</a></li>
@@ -135,18 +134,21 @@ to-fit=no">
 
     <br>
 
-    <nav class="navbar navbar-expand-sm footer">        
+    <footer>
         <div class = "container">
-            <div class="navbar-text float-left copyright">
+            <div class="navbar-text me-auto copyright">
                 <p><span class="align-baseline"></span>&copy 2019 Mobile Web 3D Applications </p>
             </div>
-            <div class="navbar-text float-right social">
+            <div class="navbar-text ms-auto social">
                 <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
                 <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
                 <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
                 <a href="#"><i class="fab fa-github-square fa-2x"></i></a>
             </div>
         </div>
-    </nav>
+    </footer>
+    <!-- <nav class="navbar navbar-expand-sm mt-auto footer">        
+
+    </nav> -->
   </body>
 </html>

@@ -8,8 +8,9 @@
 }
 
 body{
-    padding-bottom: 5px;
-    background-color: rgba(182, 231, 243, 1.0);
+    padding-top: 5px;
+    background-color: var(--background);
+    margin-bottom: 60px;
 }
 
 p{
@@ -20,6 +21,9 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Oswald', sans-serif;
 }
 
+.main_contents{
+    padding-top: 25px;
+}
 #main_3d_image{
     background-image: url(../images/main_3D.jpg);
     background-repeat: no-repeat;
