@@ -1,0 +1,53 @@
+@font-face{
+    font-family: cocaColaFont;
+    src: url(../fonts/LOKICOLA.TTF);
+}
+
+.logo {
+margin-top: 10px;
+}
+
+ul.logo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logo h1 {
+    font-family: cocaColaFont;
+    font-size: 31px;
+    margin: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: left;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 2px;
+}
+.logo h2 {
+    font-family: cocaColaFont;
+    font-size: 31px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 3px;
+    float: left;
+}
+.logo h3 {
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 5px;
+    float: left;
+}
+.logo p {
+    font-size: 10px;
+    margin-top: -10px; 
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    float: left;
+    color: white;
+}
