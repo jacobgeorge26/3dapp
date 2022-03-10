@@ -3,51 +3,120 @@
     src: url(../fonts/LOKICOLA.TTF);
 }
 
-.logo {
-margin-top: 10px;
-}
-
 ul.logo {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-
-.logo h1 {
+.logo h1{
     font-family: cocaColaFont;
-    font-size: 31px;
     margin: 0;
-    margin-top: 0px;
-    margin-bottom: 0px;
     float: left;
     padding-top: 0px;
     padding-left: 0px;
     padding-right: 2px;
 }
-.logo h2 {
+.logo h2{
     font-family: cocaColaFont;
-    font-size: 31px;
-    margin-top: 5px;
     margin-bottom: 0px;
+    float: left;
     padding-top: 0px;
     padding-left: 0px;
     padding-right: 3px;
-    float: left;
 }
-.logo h3 {
-    font-size: 25px;
-    margin-top: 5px;
+.logo h3{
     margin-bottom: 0px;
     padding-top: 0px;
     padding-left: 5px;
     float: left;
 }
-.logo p {
-    font-size: 10px;
-    margin-top: -10px; 
+.logo p{
     margin-bottom: 0px;
-    padding-top: 0px;
+    padding-top: 2px;
     padding-left: 0px;
     float: left;
     color: white;
+}
+
+/*devices that don't have room for a logo*/
+@media (min-width:0px){
+    .logo {
+        visibility: hidden;
+    }
+    .logo {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .logo h1 {  
+        font-size: 0px;
+    }
+    .logo h2 {  
+        font-size: 0px;
+        margin-top: 0px;
+    }
+    .logo h3 {
+        font-size: 0px;
+        margin-top: 0px;
+    }
+    .logo p {
+        font-size: 0px;
+        margin-top: 0px; 
+    }
+    a.navbar-brand{
+        padding-top: 0px;
+    }
+}
+/* Devices with room for both logo and collapse toggle*/
+@media (min-width: 320px) { 
+    .logo {
+        visibility: visible;
+    }
+    .logo {
+        margin-top: 5px;
+        padding-top: 5px;
+    }
+    .logo h1 {  
+        font-size: 25px;
+    }
+    .logo h2 {  
+        font-size: 25px;
+        margin-top: 3px;
+    }
+    .logo h3 {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .logo p {
+        font-size: 8px;
+        margin-top: -25px; 
+        margin-left:10px;
+    }
+    a.navbar-brand{
+        padding-top: 5px;
+    }
+}
+/* Devices with room for an expanded logo*/
+@media (min-width: 992px) { 
+    .logo {
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+    .logo h1 {  
+        font-size: 31px;
+    }
+    .logo h2 {  
+        font-size: 31px;
+        margin-top: 5px;
+    }
+    .logo h3 {
+        font-size: 25px;
+        margin-top: 5px;
+    }
+    .logo p {
+        font-size: 10px;
+        margin-top: -10px; 
+    }
+    a.navbar-brand{
+        padding-top: 10px;
+    }
 }
