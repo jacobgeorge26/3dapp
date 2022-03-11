@@ -74,9 +74,12 @@ font color and background colour
 }
 
 .dropdown-menu, .navbar-nav .open ul.dropdown-menu {
+    position: absolute!important;
     text-align: -webkit-left;
     background-color: var(--navbar-background);
     margin-top: 0px; 
+    margin-right: 0px;
+    right: 0;
 }
 
 .nav-link .dropdown-toggle{
@@ -189,6 +192,11 @@ font color and background colour
 @media (min-width: 576px) { 
     nav.navbar.navbar-expand-sm.navbar_coca_cola{
         max-height: 60px;
+    }
+    .collapse.navbar-collapse{
+        overflow: visible!important;
+        visibility: visible!important;
+        height: auto !important;
     }
     .footer {
         height: 60px;
