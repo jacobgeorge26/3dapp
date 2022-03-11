@@ -3,6 +3,7 @@
     --background-secondary: #cddcdc;
     --text: black;
     --hover: #a6b5bc;
+    --dark-hover: #0a7d8c;
     --rounding: 5px;
 }
 
@@ -80,6 +81,12 @@ h1, h2, h3, h4, h5, h6{
     padding-top: 0px;
     border-bottom-left-radius: var(--rounding);
     border-bottom-right-radius: var(--rounding);
+
+}
+
+.card.main_contents .card-text{
+    max-height: 150px;
+    overflow-y: hidden;
 }
 
 .card.main_contents .img-thumbnail{
@@ -98,6 +105,16 @@ h1, h2, h3, h4, h5, h6{
 .gallery-header:hover {
     color: var(--hover);
     border: 1px solid transparent;
+}
+
+.card.main_contents .btn-primary{
+    background-color: var(--background);
+    border: none;
+    color:var(--text);
+    float: right; 
+}
+.card.main_contents .btn-primary:hover{
+    color:var(--dark-hover);
 }
 
 .model3D  {
