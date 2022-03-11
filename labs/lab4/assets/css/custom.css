@@ -116,6 +116,12 @@ h1, h2, h3, h4, h5, h6{
 .card.main_contents .btn-primary:hover{
     color:var(--dark-hover);
 }
+.card.main_contents .btn-primary:focus {
+    color: var(--dark-hover);
+    outline: none!important;
+    border:none;
+    box-shadow: none;
+}
 
 .model3D  {
     background-color: var(--background); 

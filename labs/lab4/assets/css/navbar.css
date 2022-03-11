@@ -68,9 +68,17 @@ font color and background colour
 
 .navbar_coca_cola .navbar-toggler {
     color: var(--navbar-text);
-    border-color: var(--navbar-background);
+    border-color: transparent;
     margin-bottom: 10px; /*works with all size navbars*/
     padding-right: 20px;
+}
+
+.navbar_coca_cola .navbar-toggler:hover, .navbar_coca_cola .navbar-toggler:focus {
+    color: var(--navbar-hover);
+    border-color: transparent;
+    outline: none!important;
+    border:none;
+    box-shadow: none;
 }
 
 .dropdown-menu, .navbar-nav .open ul.dropdown-menu {
