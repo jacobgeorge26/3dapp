@@ -86,22 +86,28 @@ font color and background colour
     outline: none !important;
 }
 
-.navbar.footer {
-    color: var(--text);
-    background-color: var(--background);
-    position: sticky;
-}
 .footer {
-    color: var(--text);
-    background-color: var(--background);
-    position: absolute;
+    position: static;
+    left: 0;
     bottom: 0;
     width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 60px;
-    background-color: #f5f5f5;
-  }
+    color: var(--text);
+    background-color: var(--background);
+    align-items: flex-start;
+    display: flex;
+}
 
+.container .footer{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .navbar-text{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 .navbar-text > a {
     font-size: 10px;
 }
@@ -123,8 +129,18 @@ font color and background colour
     nav.navbar.navbar-expand-sm.navbar_coca_cola{
         max-height: 30px;
     }
-    .footer {
-        height: 30px;
+    .footer{
+        max-height: 30px;
+    }
+    .navbar-text > p {
+        font-size: 8px;
+    }
+    .navbar-text > a {
+        font-size: 8px;
+    }
+    .navbar-text.copyright, .navbar-text.social {
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 }
 /* Devices with room for both logo and collapse toggle - height should go up*/
@@ -132,10 +148,23 @@ font color and background colour
     nav.navbar.navbar-expand-sm.navbar_coca_cola{
         min-height: 60px;
     }
+    .footer{
+        max-height: 60px;
+    }
     .collapse.navbar-collapse.ms-auto{
         overflow: visible!important;
         visibility: visible!important;
         height: auto !important;;
+    }
+    .navbar-text > p {
+        font-size: 10px;
+    }
+    .navbar-text > a {
+        font-size: 10px;
+    }
+    .navbar-text.copyright, .navbar-text.social {
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }
 /* Small devices (landscape phones, 576px and up)*/
@@ -154,5 +183,9 @@ font color and background colour
     }
     .social {
         padding-top: 7px;
+    }
+    .navbar-text.copyright, .navbar-text.social {
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 }
