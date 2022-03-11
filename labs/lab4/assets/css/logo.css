@@ -7,6 +7,8 @@ ul.logo {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .logo h1{
     font-family: cocaColaFont;
@@ -35,7 +37,7 @@ ul.logo {
     padding-top: 2px;
     padding-left: 0px;
     float: left;
-    color: var(--text);
+    color: var(--navbar-text);
 }
 
 /*devices that don't have room for a logo*/

@@ -1,18 +1,23 @@
 :root {
-    /* --background: #04338d;
-    --text: #a6b5bc;
-    --hover: #82cdd7; */
-    --background: black;
-    --text: #a6b5bc;
-    --hover: #82cdd7;
-  }
+    --navbar-background: black;
+    --navbar-text: #a6b5bc;
+    --navbar-hover: #82cdd7;
+}
 
-  nav.navbar.navbar-expand-sm.navbar_coca_cola{
-    background-color: var(--background);
+nav.navbar.navbar-expand-sm.navbar_coca_cola{
+    background-color: var(--navbar-background);
     border-width: 0px;
     margin-top: -5px;
     position: fixed;
     width:100%;
+
+}
+
+.navbar>.container{
+    display: contents !important;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .collapse.navbar-collapse.ms-auto{
@@ -22,20 +27,21 @@
 /* CSS rule to overwrite the navbar-brand font color
 */
 .navbar_coca_cola .navbar-brand {
-    color: var(--text);
+    color: var(--navbar-text);
 }
 
 /* CSS rule to overwrite the navbar-brand font hover color
 */
 .navbar_coca_cola .navbar-brand:hover {
-    color: var(--hover);
+    color: var(--navbar-hover);
 }
 
 .navbar_coca_cola .navbar-nav > li > a {
-    color: var(--text);  
+    color: var(--navbar-text);  
 }
 .navbar_coca_cola .navbar-nav .nav-item {
     margin-top: 0px;
+    padding-right: 20px;
 }
 /* CSS rule to overwrite the bootstrap.css rules for setting the active 
 font color and background colour
@@ -43,8 +49,8 @@ font color and background colour
 .navbar_coca_cola .navbar-nav .nav-item > .active, 
 .navbar_coca_cola .navbar-nav > .active > a:hover, 
 .navbar_coca_cola .navbar-nav > .active > a:focus {
-    color: var(--hover); /* Font color for active font */
-    background-color: var(--background); /* Blue color for background */
+    color: var(--navbar-hover); /* Font color for active font */
+    background-color: var(--navbar-background); /* Blue color for background */
     text-decoration:none;
 }
     
@@ -52,19 +58,20 @@ font color and background colour
 */
 .navbar_coca_cola .navbar-nav > li > a:hover, 
 .navbar_coca_cola  .navbar-nav > li > a:focus {
-    color: var(--hover);  
+    color: var(--navbar-hover);  
     text-decoration:none;
 }
 
 .navbar_coca_cola .navbar-toggler {
-    color: var(--text);
-    border-color: var(--background);
+    color: var(--navbar-text);
+    border-color: var(--navbar-background);
     margin-bottom: 10px; /*works with all size navbars*/
+    padding-right: 20px;
 }
 
 .dropdown-menu, .navbar-nav .open ul.dropdown-menu {
     text-align: -webkit-left;
-    background-color: var(--background);
+    background-color: var(--navbar-background);
     margin-top: 0px; 
 }
 
@@ -73,12 +80,12 @@ font color and background colour
 }
 
 .dropdown-menu .dropdown-item {
-    color: var(--text);
-    background-color: var(--background);
+    color: var(--navbar-text);
+    background-color: var(--navbar-background);
 }
 .dropdown-menu .dropdown-item:hover {
-    color: var(--hover);
-    background-color: var(--background);
+    color: var(--navbar-hover);
+    background-color: var(--navbar-background);
     text-decoration:none;
 }
 
@@ -91,14 +98,14 @@ font color and background colour
     left: 0;
     bottom: 0;
     width: 100%;
-    color: var(--text);
-    background-color: var(--background);
+    color: var(--navbar-text);
+    background-color: var(--navbar-background);
     align-items: flex-start;
     display: flex;
 }
 
-.container .footer{
-    display: flex;
+.container.footer{
+    display: contents;
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
@@ -112,17 +119,24 @@ font color and background colour
     font-size: 10px;
 }
 .navbar-text > p {
-    color: var(--text);
+    color: var(--navbar-text);
     font-size: 14px;
     text-decoration: none;
 }
 .copyright {
     padding-top: 8px;
+    padding-left: 20px;
 }
 .social {
     padding-top: 0px; 
+    padding-right: 10px;
 }
-
+.social-icon{
+    color:var(--navbar-text);
+}
+.social-icon:hover{
+    color:var(--navbar-hover);
+}
 
 /*devices that don't have room for a logo - height should be min*/
 @media (min-width:0px){

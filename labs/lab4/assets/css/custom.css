@@ -1,6 +1,10 @@
-/* X-Small devices (portrait phones, less than 576px)
-   No media query for `xs` since this is the default in Bootstrap
-*/
+:root {
+    --background: #a6b5bc;
+    --background-secondary: #cddcdc;
+    --text: black;
+    --hover: #a6b5bc;
+    --rounding: 5px;
+}
 
 @font-face {
     font-family: OpenSans;
@@ -9,7 +13,7 @@
 
 body{
     padding-top: 5px;
-    background-color: var(--background);
+    background-color: var(--background)!important;
 }
 
 p{
@@ -20,27 +24,30 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Oswald', sans-serif;
 }
 
-.main_contents{
+.container.main_contents{
     padding-top: 25px;
+    width: auto;
+    max-width: max-content;
 }
 #main_3d_image{
     background-image: url(../images/main_3D.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px;
+    box-shadow: 0 0 8px 8px var(--background) inset;
 }
 #main_text {
     float: left;
     margin: 5%;
     width: 90%;
     display: block;
-    background-color: rgba(255,255,255,0.8);
+    background-color: var(--background);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: var(--rounding);
 }
 
 #main_text h2 {
-    color: rgba(0,102,153,1);
+    color: var(--text);
     font-size: 20px;
     margin-top: 0px;
     margin-bottom: 5px;
@@ -58,42 +65,52 @@ h1, h2, h3, h4, h5, h6{
     line-height: 1.2;
 } 
 
-.card{
-    border: 1px solid grba(0, 0, 0, .125);
+.card.main_contents{
+    border: none;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgba(182, 231, 243, 1.0);
+    background-color: transparent;
 }
 
-.img-thumbnail{
-    background-color: #fff;
-    border: 1px solid #dee2e6;
+.card.main_contents .card-body{
+    border: 1px solid var(--background-secondary);
+    background-color: var(--background-secondary);
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-top: 0px;
+    border-bottom-left-radius: var(--rounding);
+    border-bottom-right-radius: var(--rounding);
+}
+
+.card.main_contents .img-thumbnail{
+    background-color: transparent;
+    border: none;
     max-width: 100%;
     height: auto;
-    border-radius: 0.25rem;
+    border-radius: var(--rounding);
     padding: 0.25rem;
 }
 
 .gallery-header {
-    color: white;
+    color: var(--background);
 }
 
 .gallery-header:hover {
-    color: green;
+    color: var(--hover);
     border: 1px solid transparent;
 }
 
 .model3D  {
-    background-color: rgba(255, 255, 255, 0.2); 
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 1.0);
+    background-color: var(--background); 
+    border-radius: var(--rounding);
+    border: 1px solid var(--text);
     padding: 2px;
     height: 200px;
 }
 
 X3D, x3d {
-    border-radius: 5px;
-    border: 1px solid rgba(255, 0, 0, 1.0);
+    border-radius: var(--rounding);
+    border: 1px solid var(--text);
     width: 100%;
     height: 100%
 }
