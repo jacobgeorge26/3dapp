@@ -10,7 +10,7 @@ nav.navbar.navbar-expand-sm.navbar_coca_cola{
     margin-top: -5px;
     position: fixed;
     width:100%;
-
+    border-radius: 0px;
 }
 
 .navbar>.container{
@@ -38,6 +38,7 @@ nav.navbar.navbar-expand-sm.navbar_coca_cola{
 
 .navbar_coca_cola .navbar-nav > li > a {
     color: var(--navbar-text);  
+    padding-right: 20px;
 }
 .navbar_coca_cola .navbar-nav .nav-item {
     margin-top: 0px;
@@ -94,11 +95,13 @@ font color and background colour
     width:60px;
 }
 
-.dropdown-menu .dropdown-item {
+.navbar-nav .nav-item .dropdown-menu .dropdown-item {
     color: var(--navbar-text);
     background-color: var(--navbar-background);
+    text-align: end;
+    padding-right: 30px;
 }
-.dropdown-menu .dropdown-item:hover {
+.navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
     color: var(--navbar-hover);
     background-color: var(--navbar-background);
     text-decoration:none;
@@ -109,7 +112,6 @@ font color and background colour
 }
 
 .footer {
-    position: static;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -160,6 +162,7 @@ font color and background colour
     }
     .footer{
         max-height: 30px;
+        position: static;
     }
     .navbar-text > p {
         font-size: 8px;
@@ -208,6 +211,7 @@ font color and background colour
     }
     .footer {
         height: 60px;
+        position: absolute;
     }
     .navbar-text > a {
         font-size: 10px;

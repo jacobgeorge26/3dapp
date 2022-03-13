@@ -76,12 +76,13 @@ h1, h2, h3, h4, h5, h6{
 .card.main_contents .card-body{
     border: 1px solid var(--background-secondary);
     background-color: var(--background-secondary);
-    margin-left: 3px;
-    margin-right: 3px;
+    margin: 0px;
+    margin-top: -2px;
     padding-top: 0px;
     border-bottom-left-radius: var(--rounding);
     border-bottom-right-radius: var(--rounding);
-
+    border: 1px solid var(--text);
+    border-top: none;
 }
 
 .card.main_contents .card-text{
@@ -94,8 +95,11 @@ h1, h2, h3, h4, h5, h6{
     border: none;
     max-width: 100%;
     height: auto;
-    border-radius: var(--rounding);
-    padding: 0.25rem;
+    border-top-left-radius: var(--rounding);
+    border-top-right-radius: var(--rounding);
+    padding: 0px;
+    border: 1px solid var(--text);
+    border-bottom: none;
 }
 
 .gallery-header {
@@ -121,6 +125,20 @@ h1, h2, h3, h4, h5, h6{
     outline: none!important;
     border:none;
     box-shadow: none;
+}
+
+.main-contents{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.main-contents .card-container{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.main-contents .card-container.gallery{
+    padding-left: 0px;
 }
 
 .model3D  {
