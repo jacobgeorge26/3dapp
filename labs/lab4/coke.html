@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="assets/css/bootstrap.css">
 <link rel="stylesheet" href="assets/css/logo.css">
 <link rel="stylesheet" href="assets/css/navbar.css">
+<link rel="stylesheet" href="assets/css/card.css">
 <link rel="stylesheet" href="assets/css/custom.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -19,13 +20,15 @@
 <script href="assets/js/popper.min-2.9.2.js"></script>
 <script src="https://kit.fontawesome.com/cda2d1d3f8.js" crossorigin="anonymous"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+<script type='text/javascript' src='assets/js/x3dom.js'></script>
+<script src='assets/js/custom.js'></script>
 
 <!-- HTML -->
 <title>Lab 4</title>
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
       <!--navbar-->
-      <nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">  
+    <nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">  
         <div class="container">
             <ul class="logo me-auto">
                 <li>
@@ -69,12 +72,12 @@
 
     <br>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="main-contents">
 
             <div class="row">
                 <!-- model-->
-                <div class="col-sm-10 card-container">
+                <div class="col-sm-10 model-card">
                     <div class="card text-left">
                         <div class="card-header">
                             <ul class="nav nav-tabs card-header-tabs">
@@ -98,7 +101,7 @@
                             <div class="model3D">
                                 <x3d>
                                     <scene>
-                                        <inline url="assets/x3d/coke_x3d.x3d"></inline>
+                                        <inline url="assets/x3d/coke_no_animation.x3d"></inline>
                                     </scene>
                                 </x3d>
                             </div>
@@ -117,7 +120,7 @@
                     
                 </div>
                 <!--3d images-->
-                <div class="col-sm-2 card-container gallery">
+                <div class="col-sm-2 model-card gallery">
                     <div class="card text-left">
                         <div class="card-header">
                             3D Image Gallery
@@ -140,7 +143,7 @@
             </div>
             <!--coke description-->
             <div class="row">
-                <div class="col-sm-12 card-container">
+                <div class="col-sm-12 model-card">
                     <div class="card">
                         <div class="card-body">
                             <h3 class="card-title">Coca Cola</h3>

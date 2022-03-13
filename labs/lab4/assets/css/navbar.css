@@ -211,7 +211,7 @@ font color and background colour
     }
     .footer {
         height: 60px;
-        position: absolute;
+        position: fixed;
     }
     .navbar-text > a {
         font-size: 10px;
