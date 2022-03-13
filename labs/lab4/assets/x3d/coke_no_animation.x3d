@@ -10,7 +10,7 @@
     <PointLight DEF='Omni011' intensity='0.5' location='5.122 80.05 -33.13' radius='442'/>
     <Viewpoint DEF='Camera002' description='Camera002' orientation='-0.1738 -0.9818 0.07652 -0.8432' position='215.4 6.651 166.1' fieldOfView='0.6024'/>
     <Viewpoint DEF='Camera003' description='Camera003' orientation='0.5761 0.5799 0.5761 -2.091' position='-2.179 208.9 -0.8051' fieldOfView='0.6024'/>
-    <Transform DEF='CokeCan' rotation='0 -1 0 -1.934' scale='0.5517 0.5517 0.5517' translation='0 2 0'>
+    <Transform DEF='CokeCan' rotation='0 -1 0 -1.934' scale='1 1 1' translation='0 2 0'>
       <Shape>
         <Appearance>
           <Material ambientIntensity='1' diffuseColor='0.588 0.588 0.588' shininess='0.145'/>
