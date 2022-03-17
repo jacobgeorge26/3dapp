@@ -73,13 +73,13 @@
 
     <br>
 
-    <div class="container">
+    <div class="container model-container">
         <div class="main-contents">
 
             <div class="row">
                 <!-- model-->
                 <div class="col-sm-10 model-card">
-                    <div class="card text-left">
+                    <div class="card text-left" id="model">
                         <div class="card-header">
                             <ul class="nav nav-tabs card-header-tabs">
                                 <li class="nav-item">
@@ -115,30 +115,25 @@
                         </div>
 
                     </div>
-
-
-
-                    
                 </div>
                 <!--3d images-->
                 <div class="col-sm-2 model-card gallery">
-                    <div class="card text-left">
+                    <div class="card text-left" id="gallery">
                         <div class="card-header">
                             3D Image Gallery
                         </div>
-                        <a href="coke.html">
+                        <a class="image" href="coke.html">
                             <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg"
                             alt="Coca Cola">
                         </a>
-                        <a href="sprite.html">
+                        <a class="image" href="sprite.html">
                             <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg"
                             alt="Sprite">
                         </a>
-                        <a href="pepper.html">
+                        <a class="image" href="pepper.html">
                             <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg"
                             alt="Dr Pepper">
                         </a>
-                        <p class="card-text">3D images rendered here</p>
                     </div>
                 </div>
             </div>
@@ -177,5 +172,11 @@
         </div>
       </div>
     </div>
+    <script>
+        var model = document.defaultView.getComputedStyle(document.getElementById('model'));
+        document.getElementById('gallery').style.height = model.height
+        var images = document.defaultView.getComputedStyle(document.getElementById('gallery-images'));
+        images.lineHeight = images.height / 3;
+    </script>
   </body>
 </html>

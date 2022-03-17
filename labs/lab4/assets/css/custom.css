@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .model3D  {
-    background-color: var(--background); 
+    background-image: linear-gradient(white, black);
     border-radius: var(--rounding);
     border: 1px solid var(--text);
     padding: 2px;
