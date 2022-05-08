@@ -13,6 +13,7 @@ to-fit=no">
 <link rel="stylesheet" href="assets/css/navbar.css">
 <link rel="stylesheet" href="assets/css/card.css">
 <link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="assets/css/style.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
@@ -20,10 +21,12 @@ to-fit=no">
 <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type='text/javascript' src='assets/scripts/js/x3dom.js'></script>
 <script src='assets/scripts/js/custom.js'></script>
+<script src='assets/scripts/js/setupPage.js'></script>
+<script src='assets/scripts/js/gallery_generator.js'></script>
+<script src='assets/scripts/php/hook.php'></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script href="assets/scripts/js/popper.min-2.9.2.js"></script>
 <script src="https://kit.fontawesome.com/cda2d1d3f8.js" crossorigin="anonymous"></script>
-<script language="javascript" src="assets/scripts/js/setupPage.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
 <!-- HTML -->
 <title>Lab 5</title>
@@ -189,15 +192,15 @@ to-fit=no">
                         <div class="card-header">
                             3D Image Gallery
                         </div>
-                        <a class="image" href="javascript:swap('coke')">
+                        <a class="image" id="gallery-image" href="javascript:swap('coke')">
                             <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg"
                             alt="Coca Cola">
                         </a>
-                        <a class="image" href="javascript:swap('sprite')">
+                        <a class="image" id="gallery-image" href="javascript:swap('sprite')">
                             <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg"
                             alt="Sprite">
                         </a>
-                        <a class="image" href="javascript:swap('pepper')">
+                        <a class="image" id="gallery-image" href="javascript:swap('pepper')">
                             <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg"
                             alt="Dr Pepper">
                         </a>
