@@ -1,0 +1,130 @@
+@font-face{
+    font-family: cocaColaFont;
+    src: url(../fonts/LOKICOLA.TTF);
+}
+
+ul.logo {
+    list-style-type: none;
+}
+.logo h1{
+    font-family: cocaColaFont;
+    margin: 0;
+    float: left;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 2px;
+}
+.logo h2{
+    font-family: cocaColaFont;
+    margin-bottom: 0px;
+    float: left;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 3px;
+}
+.logo h3{
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 5px;
+    float: left;
+}
+.logo p{
+    margin-bottom: 0px;
+    padding-top: 2px;
+    padding-left: 0px;
+    float: left;
+    color: var(--navbar-text);
+}
+
+/*devices that don't have room for a logo*/
+@media (min-width:0px){
+    ul.logo {
+        visibility: hidden;
+        padding: 20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin: 0px;
+    }
+    .logo h1 {  
+        font-size: 0px;
+    }
+    .logo h2 {  
+        font-size: 0px;
+        margin-top: 0px;
+    }
+    .logo h3 {
+        font-size: 0px;
+        margin-top: 0px;
+    }
+    .logo p {
+        font-size: 0px;
+        margin-top: 0px; 
+    }
+    .logo a.navbar-brand{
+        padding-top: 0px;
+        margin-left:-15px;
+    }
+}
+/* Devices with room for both logo and collapse toggle*/
+@media (min-width: 320px) { 
+    ul.logo {
+        visibility: visible;
+        padding-top: 10px;
+        margin-top: 0px;
+    }
+    .logo h1 {  
+        font-size: 25px;
+    }
+    .logo h2 {  
+        font-size: 25px;
+        margin-top: 3px;
+    }
+    .logo h3 {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-left:-5px;
+    }
+    .logo p {
+        font-size: 8px;
+        margin-top: -30px; 
+    }
+    a.navbar-brand{
+        padding-top: 5px;
+    }
+}
+@media (min-width: 576px) { 
+    ul.logo {
+        margin-top: 10px;
+    }
+}
+@media (min-width: 768px) { 
+    ul.logo {
+        margin-top: 10px;
+    }
+}
+/* Devices with room for an expanded logo*/
+@media (min-width: 992px) { 
+    ul.logo {
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .logo h1 {  
+        font-size: 28px;
+    }
+    .logo h2 {  
+        font-size: 28px;
+        margin-top: 5px;
+    }
+    .logo h3 {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-left:-5px;
+    }
+    .logo p {
+        font-size: 10px;
+        margin-top: -25px; 
+    }
+    a.navbar-brand{
+        padding-top: 10px;
+    }
+}

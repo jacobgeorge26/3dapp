@@ -1,5 +1,6 @@
 /* X-Small devices (portrait phones, less than 576px)
    No media query for `xs` since this is the default in Bootstrap
+LAB 1
 */
 @font-face{
     font-family: cocaColaFont;
@@ -67,11 +68,6 @@ h1, h2, h3, h4, h5, h6{
     background-color: rgba(182, 231, 243, 1.0);
 }
 
-.navbar-toggle{
-    background-color: #760003;
-    border-color: #760003;
-
-}
 .logo {
 margin-top: 3px;
 }
@@ -184,6 +180,7 @@ text color, hover, background, focus
     color: #030303;
     background-color: #e98074;
 }
+
 
 .navbar_coca_cola .navbar-toggler {
     outline: none !important;
