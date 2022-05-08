@@ -170,7 +170,7 @@ font color and background colour
     .navbar-text > a {
         font-size: 8px;
     }
-    .navbar-text.copyright, .navbar-text.social {
+    .navbar-text.copyright, .navbar-text.social{
         margin-top: 0px;
         margin-bottom: 0px;
     }
@@ -225,7 +225,7 @@ font color and background colour
     .social {
         padding-top: 7px;
     }
-    .navbar-text.copyright, .navbar-text.social {
+    .navbar-text.copyright, .navbar-text.social{
         margin-top: 15px;
         margin-bottom: 15px;
     }
