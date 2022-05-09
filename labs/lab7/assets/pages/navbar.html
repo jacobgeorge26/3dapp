@@ -1,0 +1,44 @@
+<nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">  
+    <div class="container">
+        <ul class="logo me-auto">
+            <li>
+                <a class="navbar-brand" href="javascript:swap('home')">
+                    <h1>Coca</h1>
+                    <h2>Cola</h2>
+                    <h3>Journey</h3>       
+                    </a>
+            </li>
+            <li>
+                <p>Refreshing the world, one story at a time</p>
+            </li>      
+        </ul>   
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-light fas fa-bars" style="height: 1px"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item ms-auto">
+                    <a class="nav-link" href="javascript:swap('home')">Home</a>
+                </li>
+                <li class="nav-item ms-auto">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item ms-auto">
+                    <a class="nav-link" href="#" onclick="changeLook()">Restyle</a>
+                </li>
+            <li class="nav-item dropdown ms-auto">
+                    <a class="nav-link dropdown-toggle" href='#' id="navbardrop" data-toggle="dropdown" aria-expanded="false">
+                    Drinks
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbardrop">
+                    <li><a class="dropdown-item" href="javascript:swap('model')">Coca Cola</a></li>
+                    <li><a class="dropdown-item" href="javascript:swap('model')">Sprite</a></li>
+                    <li><a class="dropdown-item" href="javascript:swap('model')">Dr Pepper</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div> 
+    </div> 
+</nav>

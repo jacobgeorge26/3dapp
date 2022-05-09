@@ -21,7 +21,7 @@ to-fit=no">
 <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type='text/javascript' src='assets/scripts/js/x3dom.js'></script>
+<script type='text/javascript' src='assets/scripts/js/import/x3dom.js'></script>
 <script src='assets/scripts/js/custom.js'></script>
 <script src='assets/scripts/js/setupPage.js'></script>
 <script src='assets/scripts/js/gallery_generator.js'></script>
@@ -30,14 +30,18 @@ to-fit=no">
 <script src='assets/scripts/js/getJsonData.js'></script>
 <script src='assets/scripts/php/hook.php'></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script href="assets/scripts/js/popper.min-2.9.2.js"></script>
+<script href="assets/scripts/js/import/popper.min-2.9.2.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
 <!-- HTML -->
 <title>3D Web Apps</title>
 </head>
-<body class="d-flex flex-column min-vh-100" id="body" onload="swap('home')" onunload="swap('home')" onbeforeunload="swap('home')">
+<body class="d-flex flex-column min-vh-100" id="body" onload="loadPage()">
     <!--Navbar-->
     <div w3-include-html="./assets/pages/navbar.html"></div>
+
+    <div style="display:none;">
+      <a id="load" href="javascript:swap('home')">
+      </div>
 
     <br>
     <!--SWITCH Home-->
@@ -47,7 +51,7 @@ to-fit=no">
     </div>
     
     <!--SWITCH Model Page-->
-    <div id="model" class="container model-container" >
+    <div id="model" class="container model-container" style="display:none;">
         <div w3-include-html="./assets/pages/model.html"></div>        
     </div>
 

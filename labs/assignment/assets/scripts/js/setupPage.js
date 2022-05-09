@@ -1,5 +1,6 @@
 function swap(selected)
 {
+    console.log(selected);
     document.getElementById('home').style.display = 'none';
     document.getElementById('model').style.display = 'none';
 
@@ -10,5 +11,11 @@ function swap(selected)
     }
 }
 
+function loadPage(){
+    setTimeout(function(){
+        document.getElementById("load").click();
+    }, 500);
+    
+}
 
 
