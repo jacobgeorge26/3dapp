@@ -24,6 +24,7 @@ to-fit=no">
 <script src='assets/scripts/js/setupPage.js'></script>
 <script src='assets/scripts/js/restyle.js'></script>
 <script src='assets/scripts/js/gallery_generator.js'></script>
+<script src='assets/scripts/js/getJsonData.js'></script>
 <script src='assets/scripts/php/hook.php'></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script href="assets/scripts/js/popper.min-2.9.2.js"></script>
@@ -83,15 +84,14 @@ to-fit=no">
     <br>
 
     <!--Home-->
-    <div id="home" class="container main_contents">
+    <div class="container main_contents" id="home">
         <div class="row">
             <div class="col-sm-12">
                 <div id="main_3d_image">
                     <div id="main_text" class="col-xs-12 col-sm-4">
-                        <h2>Coca Cola Great Britain</h2>
-                        <h3>Founded by Dr John S Pemberton</h3>
-                        <p>Coca Cola Great Britain 
-                            Founded in 1886 by pharmacist Dr John S Pemberton in Atlanta, Georgia, The Coca‑Cola Company is the world's leading manufacturer, marketer and distributor of non-alcoholic beverage concentrates and syrups, and produces nearly 400 brands.</p>
+                        <div id="title_home"></div>
+                        <div id="subTitle_home"></div>
+                        <div id="description_home"></div>
                     </div>
                 </div>
             </div>
@@ -104,11 +104,8 @@ to-fit=no">
                         <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coca Cola">
                     </a>
                     <div class="card-body">
-                        <h3 class="card-title">Coca Cola</h3>
-                        <p class="card-text">History of Coca Cola: 1886-1892
-                            Atlanta Beginnings: It was 1886, and in New York Harbour, workers were constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was about to be unveiled.
-                            Like many people who change history, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done, he carried it a few doors down to Jacobs' Pharmacy. Here, the mixture was combined with carbonated water and sampled by customers who all agreed - this new drink was something special. So Jacobs' Pharmacy put it on sale for five cents (about 3p) a glass.
-                        </p>
+                        <div id="title_coke"></div>
+                        <div id="description_coke"></div>
                         <a href="javascript:swap('coke')" class="btn btn-primary">Find out more...</a>
                     </div>
                 </div>
@@ -120,10 +117,8 @@ to-fit=no">
                         <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
                     </a>
                     <div class="card-body">
-                        <h3 class="card-title">Sprite</h3>
-                        <p class="card-text">First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's leading lemon and lime flavoured soft drink and is sold in more than 190 different countries.
-                            Sprite Zero, part of our no sugar Zero range, offers the delicious lemon lime taste of Sprite without the sugar or calories. 
-                        </p>
+                        <div id="title_sprite"></div>
+                        <div id="description_sprite"></div>
                         <a href="javascript:swap('sprite')" class="btn btn-primary">Find out more...</a>
                     </div>
                 </div>
@@ -135,10 +130,8 @@ to-fit=no">
                         <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
                     </a>
                     <div class="card-body">
-                        <h3 class="card-title">Dr Pepper</h3>
-                        <p class="card-text">Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century and it's still the same, with that distinctive flavour you just can't quite put your tongue on.
-                            It was created by Texas pharmacist Charles Alderton in 1885. He gave a sample of the first ever batch to Wade Morrison, a local shop owner, and Mr Morrison instantly agreed to stock the drink. The distinctive, bold taste of Dr Pepper has been popular ever since.
-                        </p>
+                        <div id="title_pepper"></div>
+                        <div id="description_pepper"></div>
                         <a href="javascript:swap('pepper')" class="btn btn-primary">Find out more...</a>
                     </div>
                 </div>
@@ -147,7 +140,7 @@ to-fit=no">
     </div>
     
     <!--Coke-->
-    <div id="coke" class="container model-container" style="display:none;">
+    <div id="coke" class="container model-container"  style="display:none;">
         <div class="main-contents">
 
             <div class="row">
@@ -201,18 +194,6 @@ to-fit=no">
                             <div class="gallery" id="gallery-coke">
                             </div>
                         </div>
-                        <!-- <a class="image" id="gallery-image" href="javascript:swap('coke')">
-                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg"
-                            alt="Coca Cola">
-                        </a>
-                        <a class="image" id="gallery-image" href="javascript:swap('sprite')">
-                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg"
-                            alt="Sprite">
-                        </a>
-                        <a class="image" id="gallery-image" href="javascript:swap('pepper')">
-                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg"
-                            alt="Dr Pepper">
-                        </a> -->
                     </div>
                 </div>
             </div>
@@ -220,13 +201,10 @@ to-fit=no">
             <div class="row">
                 <div class="col-sm-12 model-card">
                     <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Coca Cola</h3>
-                            <p class="card-text">History of Coca Cola: 1886-1892
-                                Atlanta Beginnings: It was 1886, and in New York Harbour, workers were constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was about to be unveiled.
-                                Like many people who change history, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done, he carried it a few doors down to Jacobs' Pharmacy. Here, the mixture was combined with carbonated water and sampled by customers who all agreed - this new drink was something special. So Jacobs' Pharmacy put it on sale for five cents (about 3p) a glass.
-                            </p>
-                        </div>
+                         <div class="card-body">
+                            <div id="exp_title_coke"></div>
+                            <div id="exp_description_coke"></div>
+                        </div> 
                     </div>
                 </div>
             </div>
