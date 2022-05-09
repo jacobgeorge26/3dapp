@@ -18,7 +18,7 @@
 }
 
 .card.main_contents .card-text{
-    max-height: 150px;
+    max-height: 50px;
     overflow-y: hidden;
 }
 
@@ -52,6 +52,7 @@
     border: none;
     color:var(--text);
     float: right; 
+    margin-top: 5px;
 }
 .card.main_contents .btn-primary:hover{
     color:var(--dark-hover);

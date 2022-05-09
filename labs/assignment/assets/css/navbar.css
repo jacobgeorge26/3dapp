@@ -4,7 +4,7 @@
     --navbar-hover: #82cdd7;
 }
 
-nav.navbar.navbar-expand-sm.navbar_coca_cola{
+nav.navbar.navbar-expand-sm.navbar{
     background-color: var(--navbar-background);
     border-width: 0px;
     margin-top: -5px;
@@ -26,34 +26,34 @@ nav.navbar.navbar-expand-sm.navbar_coca_cola{
 
 /* CSS rule to overwrite the navbar-brand font color
 */
-.navbar_coca_cola .navbar-brand {
+.navbar .navbar-brand {
     color: var(--navbar-text);
 }
 
 /* CSS rule to overwrite the navbar-brand font hover color
 */
-.navbar_coca_cola .navbar-brand:hover {
+.navbar .navbar-brand:hover {
     color: var(--navbar-hover);
 }
 
-.navbar_coca_cola .navbar-nav > li > a {
+.navbar .navbar-nav > li > a {
     color: var(--navbar-text);  
     padding-right: 20px;
 }
-.navbar_coca_cola .navbar-nav .nav-item {
+.navbar .navbar-nav .nav-item {
     margin-top: 0px;
     padding-right: 20px;
 }
 
-.navbar_coca_cola .navbar-nav{
+.navbar .navbar-nav{
     float:right;
 }
 /* CSS rule to overwrite the bootstrap.css rules for setting the active 
 font color and background colour
 */
-.navbar_coca_cola .navbar-nav .nav-item > .active, 
-.navbar_coca_cola .navbar-nav > .active > a:hover, 
-.navbar_coca_cola .navbar-nav > .active > a:focus {
+.navbar .navbar-nav .nav-item > .active, 
+.navbar .navbar-nav > .active > a:hover, 
+.navbar .navbar-nav > .active > a:focus {
     color: var(--navbar-hover); /* Font color for active font */
     background-color: var(--navbar-background); /* Blue color for background */
     text-decoration:none;
@@ -61,20 +61,20 @@ font color and background colour
     
 /* CSS rule to overwrite the bootstrap.css text hover color on the navbar
 */
-.navbar_coca_cola .navbar-nav > li > a:hover, 
-.navbar_coca_cola  .navbar-nav > li > a:focus {
+.navbar .navbar-nav > li > a:hover, 
+.navbar  .navbar-nav > li > a:focus {
     color: var(--navbar-hover);  
     text-decoration:none;
 }
 
-.navbar_coca_cola .navbar-toggler {
+.navbar .navbar-toggler {
     color: var(--navbar-text);
     border-color: transparent;
     margin-bottom: 10px; /*works with all size navbars*/
     padding-right: 20px;
 }
 
-.navbar_coca_cola .navbar-toggler:hover, .navbar_coca_cola .navbar-toggler:focus {
+.navbar .navbar-toggler:hover, .navbar .navbar-toggler:focus {
     color: var(--navbar-hover);
     border-color: transparent;
     outline: none!important;
@@ -107,7 +107,7 @@ font color and background colour
     text-decoration:none;
 }
 
-.navbar_coca_cola .navbar-toggler {
+.navbar .navbar-toggler {
     outline: none !important;
 }
 
@@ -157,7 +157,7 @@ font color and background colour
 
 /*devices that don't have room for a logo - height should be min*/
 @media (min-width:0px){
-    nav.navbar.navbar-expand-sm.navbar_coca_cola{
+    nav.navbar.navbar-expand-sm.navbar{
         max-height: fit-content;
     }
     .footer{
@@ -177,7 +177,7 @@ font color and background colour
 }
 /* Devices with room for both logo and collapse toggle - height should go up*/
 @media (min-width: 320px) { 
-    nav.navbar.navbar-expand-sm.navbar_coca_cola{
+    nav.navbar.navbar-expand-sm.navbar{
         min-height: 60px;
     }
     .footer{
@@ -201,7 +201,7 @@ font color and background colour
 }
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) { 
-    nav.navbar.navbar-expand-sm.navbar_coca_cola{
+    nav.navbar.navbar-expand-sm.navbar{
         max-height: 60px;
     }
     .collapse.navbar-collapse{

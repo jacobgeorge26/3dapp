@@ -1,12 +1,11 @@
-var xmlHttp = new XMLHttpRequest();
+function loadGallery(){
+    var xmlHttp = new XMLHttpRequest();
 
-var numberOfColumns = 4;
+    var numberOfColumns = 4;
 
-var htmlCode = "";
+    var htmlCode = "";
 
-var response;
-
-$(document).ready(function(){
+    var response;
     var send = "assets/scripts/php/hook.php";
 
     xmlHttp.open("GET", send, true);
@@ -20,12 +19,10 @@ $(document).ready(function(){
 
             for(var i=0;i<response.length;i++){
                 htmlCode += '<a href ="' + 'assets/images/gallery_images/' + response[i] + '">';
-                 htmlCode += '<img class="card-img-top img-thumbnail" src="assets/images/gallery_images/' + response[i] + '"/>';
+                htmlCode += '<img class="card-img-top img-thumbnail" src="assets/images/gallery_images/' + response[i] + '"/>';
                 htmlCode += '</a>';
             }
             document.getElementById('gallery-coke').innerHTML = htmlCode;
-            // document.getElementById('gallery_sprite').innerHTML = htmlCode;
-            // document.getElementById('gallery_pepper').innerHTML = htmlCode;
         }
     }
-});
+}
