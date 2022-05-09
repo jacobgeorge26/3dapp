@@ -150,6 +150,7 @@ font color and background colour
 }
 .social-icon{
     color:var(--navbar-text);
+    margin-left:10px;
 }
 .social-icon:hover{
     color:var(--navbar-hover);
