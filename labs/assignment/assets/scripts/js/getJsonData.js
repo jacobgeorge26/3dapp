@@ -12,6 +12,8 @@ $(document).ready(function(){
 
         $('#title_home').html('<h2>' + jsonObj.pageTextData[ids["home"]].title + '</h2>');
         $('#description_home').html('<p>' + jsonObj.pageTextData[ids["home"]].description + '</p>');
+        $('#title_home_temp').html('<h2>' + jsonObj.pageTextData[ids["home"]].tempTitle + '</h2>');
+        $('#description_home_temp').html('<p>' + jsonObj.pageTextData[ids["home"]].tempDescription + '</p>');
     
         $('#title_coke').html('<h3 class="card-title">' + jsonObj.pageTextData[1].title + '</h3>');
         $('#description_coke').html('<p class="card-text">' + jsonObj.pageTextData[1].description + '</p>');
