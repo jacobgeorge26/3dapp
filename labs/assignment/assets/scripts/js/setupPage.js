@@ -1,6 +1,5 @@
 function swap(selected)
 {
-    console.log(selected);
     document.getElementById('home').style.display = 'none';
     document.getElementById('model').style.display = 'none';
 
@@ -13,10 +12,21 @@ function swap(selected)
 
 function loadPage(){
     setTimeout(function(){
-        swap('model');
+        swap('home');
     }, 500);
-    x3dom.reload();
     
 }
+
+$(document).ready(function() {
+    setTimeout(function(){
+        selectModel();
+    }, 1000);	
+});
+
+function selectModel() {
+    $('#model3D').show();
+    x3dom.reload();
+}
+
 
 
