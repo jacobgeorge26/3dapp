@@ -31,6 +31,15 @@ function selectModel(index = 1) {
     x3dom.reload();
 }
 
+var isWireframe = false;
+function toggleWireframe(){
+    isWireframe = !isWireframe;
+    document.getElementById('model1').runtime.togglePoints(isWireframe);
+    document.getElementById('model2').runtime.togglePoints(isWireframe);
+    document.getElementById('model3').runtime.togglePoints(isWireframe);
+    x3dom.reload();
+}
+
 
 
 
