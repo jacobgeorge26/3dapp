@@ -23,10 +23,14 @@ $(document).ready(function() {
     }, 1000);	
 });
 
-function selectModel() {
-    $('#model3D').show();
+function selectModel(index = 1) {
+    $('#model1').hide();
+    $('#model2').hide();
+    $('#model3').hide();
+    $('#model' + index.toString()).show();
     x3dom.reload();
 }
+
 
 
 
