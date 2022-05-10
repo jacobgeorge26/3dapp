@@ -13,8 +13,9 @@ function swap(selected)
 
 function loadPage(){
     setTimeout(function(){
-        document.getElementById("load").click();
+        swap('model');
     }, 500);
+    x3dom.reload();
     
 }
 
