@@ -3,7 +3,9 @@ var ids = {
     "mod1": 1,
     "mod2": 2,
     "mod3": 3,
-    "urls": 4
+    "urls": 4,
+    "brands":5,
+    "imgs":6
     };
 
 $(document).ready(function(){
@@ -39,8 +41,21 @@ function getHtml(jsonObj){
     $('#title_pepper').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod3"]].title + '</h3>');
     $('#description_pepper').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod3"]].description + '</p>');
 
+    //GITHUB LINKS
     $archive = '<a href="'+ jsonObj.pageTextData[ids["urls"]].archive + '"><i class="fa fa-info fa-2x social-icon"></i></a>';
     $models = '<a href="'+ jsonObj.pageTextData[ids["urls"]].models + '"><i class="fa fa-file-code-o fa-2x social-icon"></i></a>';
     $github = '<a href="'+ jsonObj.pageTextData[ids["urls"]].mainRepo + '"><i class="fa fa-github-square fa-2x social-icon"></i></a>';
     $('#social-links').html($archive + $models + $github);
+
+    //DROPDOWN ITEMS
+    $item1 = '<li><a class="dropdown-item" href="javascript:swap(\'model\')" onclick="selectModel(1)">' + jsonObj.pageTextData[ids["brands"]].brand1 + '</a></li>';
+    $item2 = '<li><a class="dropdown-item" href="javascript:swap(\'model\')" onclick="selectModel(2)">' + jsonObj.pageTextData[ids["brands"]].brand2 + '</a></li>';
+    $item3 = '<li><a class="dropdown-item" href="javascript:swap(\'model\')" onclick="selectModel(3)">' + jsonObj.pageTextData[ids["brands"]].brand3 + '</a></li>';
+    $('#dropdown').html($item1 + $item2 + $item3);
+
+    //HOME PAGE MORE INFO IMAGES
+    $('#img1').html('<a href="#"><img class="card-img-top img-fluid img-thumbnail" src="' + jsonObj.pageTextData[ids["imgs"]].img1 + '" alt="'+ jsonObj.pageTextData[ids["brands"]].brand1 +'"></a>');
+    $('#img2').html('<a href="#"><img class="card-img-top img-fluid img-thumbnail" src="' + jsonObj.pageTextData[ids["imgs"]].img2 + '" alt="'+ jsonObj.pageTextData[ids["brands"]].brand2 +'"></a>');
+    $('#img3').html('<a href="#"><img class="card-img-top img-fluid img-thumbnail" src="' + jsonObj.pageTextData[ids["imgs"]].img3 + '" alt="'+ jsonObj.pageTextData[ids["brands"]].brand3 +'"></a>');
+
 }
