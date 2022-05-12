@@ -24,6 +24,10 @@ nav.navbar.navbar-expand-sm.navbar{
     display:grid!important;
 }
 
+.fa.restyle{
+    font-size: 18px;
+}
+
 /* CSS rule to overwrite the navbar-brand font color
 */
 .navbar .navbar-brand {

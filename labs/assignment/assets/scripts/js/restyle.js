@@ -1,14 +1,21 @@
 var counter = 0;
 
-function changeLook(){
-    counter += 1;
+async function changeLook(reset = false){
+    counter = reset ? 0 : counter + 1;
+    var r = document.querySelector(':root');
     switch(counter){
         case 1:
-            document.getElementById('body').style.backgroundColor = 'lightblue';
+            var css = await getOriginalCSS();
         break;
         case 2:
+            var css = await getNewCSS();   
             counter = 0;
-            document.getElementById('body').style.backgroundColor = 'lightgrey';
         break;
     }
+    
+    
+    for (var [key, value] of Object.entries(css)) {
+        r.style.setProperty(key, value);
+    }
+
 }

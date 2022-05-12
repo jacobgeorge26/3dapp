@@ -1,13 +1,16 @@
-.card.main_contents{
+.card.main_contents, .card{
     border: none;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: transparent;
 }
 
-.card.main_contents .card-body{
+.card-body{
     border: 1px solid var(--background-secondary);
     background-color: var(--background-secondary);
+}
+
+.card.main_contents .card-body{
     margin: 0px;
     margin-top: -2px;
     padding-top: 0px;
@@ -57,6 +60,10 @@
     color:var(--text);
     margin-bottom: 5px;  
     margin-top: 5px;
+}
+
+.card-text, .card-title{
+    color:var(--text);
 }
 
 .card.main_contents .btn-primary:hover, .btn.btn-primary:hover{

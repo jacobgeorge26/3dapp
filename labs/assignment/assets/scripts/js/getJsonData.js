@@ -6,7 +6,9 @@ var ids = {
     "urls": 4,
     "brands":5,
     "imgs":6,
-    "info":7
+    "info":7,
+    "oldCss":8,
+    "newCss":9
     };
 
 $(document).ready(function(){
@@ -67,4 +69,23 @@ function getHtml(jsonObj){
     $('#info1').html('<a href="' + jsonObj.pageTextData[ids["info"]].info1 + '" class="btn btn-primary">Find out more...</a>');
     $('#info2').html('<a href="' + jsonObj.pageTextData[ids["info"]].info2 + '" class="btn btn-primary">Find out more...</a>');
     $('#info3').html('<a href="' + jsonObj.pageTextData[ids["info"]].info3 + '" class="btn btn-primary">Find out more...</a>');
+}
+
+async function getNewCSS(){
+    let promise = new Promise(function(resolve) {
+        resolve(jQuery.getJSON('./assets/models/data.json', function(jsonObj){
+        }));
+      });
+    var css = await promise;
+    return css.pageTextData[ids["newCss"]];
+}
+
+async function getOriginalCSS(){
+    let promise = new Promise(function(resolve) {
+        resolve(jQuery.getJSON('./assets/models/data.json', function(jsonObj){
+        }));
+      });
+    var css = await promise;
+    return css.pageTextData[ids["oldCss"]];
+
 }

@@ -8,19 +8,21 @@ function swap(selected)
     if(selected=='model'){
         loadGallery();
     }
+
+    document.getElementById("restyle").onclick=async ()=>{ changeLook()};
 }
 
 function loadPage(){
     setTimeout(function(){
         swap('home');
-    }, 500);
-    
+        document.getElementById("restyle").click();
+    }, 250);    
 }
 
 $(document).ready(function() {
     setTimeout(function(){
         selectModel();
-    }, 1000);	
+    }, 500);	
 });
 
 function selectModel(index = 1) {
