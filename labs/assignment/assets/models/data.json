@@ -30,6 +30,11 @@
 			"img1":"assets/images/fanta.jpg",
 			"img2":"assets/images/sprite.jpg",
 			"img3":"assets/images/costa.jpg"
+		},
+		{
+			"info1":"https://www.coca-cola.co.uk/brands/fanta",
+			"info2":"https://www.coca-cola.co.uk/brands/sprite",
+			"info3":"https://www.coca-cola.co.uk/brands/costa-coffee"
 		}
 	]
 }

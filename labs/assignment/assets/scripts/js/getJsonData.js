@@ -5,7 +5,8 @@ var ids = {
     "mod3": 3,
     "urls": 4,
     "brands":5,
-    "imgs":6
+    "imgs":6,
+    "info":7
     };
 
 $(document).ready(function(){
@@ -62,4 +63,8 @@ function getHtml(jsonObj){
     $('#img2').html('<a href="#"><img class="card-img-top img-fluid img-thumbnail" src="' + jsonObj.pageTextData[ids["imgs"]].img2 + '" alt="'+ jsonObj.pageTextData[ids["brands"]].brand2 +'"></a>');
     $('#img3').html('<a href="#"><img class="card-img-top img-fluid img-thumbnail" src="' + jsonObj.pageTextData[ids["imgs"]].img3 + '" alt="'+ jsonObj.pageTextData[ids["brands"]].brand3 +'"></a>');
 
+    //MORE INFO LINKS
+    $('#info1').html('<a href="' + jsonObj.pageTextData[ids["info"]].info1 + '" class="btn btn-primary">Find out more...</a>');
+    $('#info2').html('<a href="' + jsonObj.pageTextData[ids["info"]].info2 + '" class="btn btn-primary">Find out more...</a>');
+    $('#info3').html('<a href="' + jsonObj.pageTextData[ids["info"]].info3 + '" class="btn btn-primary">Find out more...</a>');
 }
