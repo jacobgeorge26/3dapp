@@ -1,26 +1,20 @@
 <div class="main-contents">
     <div class="row">
         <!-- model-->
-        <div class="col-sm-9 model-card">
-            <div class="card text-left">
-                <div class="card-header">
-                    <!--TODO make this dynamic-->
-                    <h4 class="card-title">Coca Cola X3D Model</h4>
-                </div>
-
-                
-                <!--x3d code-->
-                <div class="card-body">
-                    <a href="#" onclick="toggleWireframe()"class="btn btn-primary">Toggle Wireframe</a>
-                    
-
+        <div class="card model-card">
+            <div class="card-header">
+                <!--TODO make this dynamic-->
+                <h4 class="card-title">Coca Cola X3D Model</h4>
+            </div>
+            <div class="card-body">
+                <div id="model-container">
                     <div class="model3D" id="model3D">
                         <x3d id = "model1">
                             <scene>
                                 <inline url="assets/x3d/fanta.x3d"></inline>
                             </scene>
                         </x3d>
-                        <x3d id = "model2">
+                        <!-- <x3d id = "model2">
                             <scene>
                                 <inline url="assets/x3d/fanta.x3d"></inline>
                             </scene>
@@ -29,51 +23,60 @@
                             <scene>
                                 <inline url="assets/x3d/costa.x3d"></inline>
                             </scene>
-                        </x3d>
+                        </x3d> -->
+                        <!--TODO make this dynamic - SHOW HIDE-->
                     </div>
-
-                    <!--TODO make this dynamic - SHOW HIDE-->
-                    <p class="card-text">X3D Model Description</p>
-                    <!--TODO implement these-->
-                    <a href="#" class="btn btn-primary">Front</a>
-                    <a href="#" class="btn btn-primary">Back</a>
-                    <a href="#" class="btn btn-primary">Left</a>
-                    <a href="#" class="btn btn-primary">Right</a>
+                    
+                    <div id="buttons">
+                        <div class="model-settings">
+                        <a href="#" onclick="toggleWireframe()"class="btn btn-primary">Toggle Wireframe</a>
+                        <div id="model-container">                               
+                            <div id="left">
+                                <a href="#" class="btn btn-primary">Front</a>
+                                <a href="#" class="btn btn-primary">Left</a>                  
+                            </div>
+                            <div id="right">
+                                <a href="#" class="btn btn-primary">Back</a>
+                                <a href="#" class="btn btn-primary">Right</a>
+                            </div>
+                        </div>
+                        </div>                
+                    </div>
                 </div>
+                <p class="card-text">X3D Model Description</p>
+                
 
             </div>
-        </div>
+        </div> 
+    </div>
 
-        <!--3d images-->
-        <div class="col-sm-3 model-card gallery">
-            <div class="card text-left" id="gallery">
-                <div class="card-header">
-                    Gallery
-                </div>
-                <div class="card-body">
-                    <div class="gallery" id="model_gallery"></div>
-                </div>
+    <!--description-->
+    <div class="row">
+        <div class="card model-card">
+            <div class="card-header">
+                <div id="info_title_model1"></div>
+                <div id="info_title_model2"></div>
+                <div id="info_title_model3"></div>
             </div>
+            <div class="card-body">              
+                <div id="info_description_model1"></div>  
+                <div id="info_description_model2"></div>  
+                <div id="info_description_model3"></div>     
+            </div> 
         </div>
     </div>
-    <!--coke description-->
+
+    <!--gallery-->
     <div class="row">
-        <div class="col-sm-12 model-card">
-            <div class="card">
-                 <div class="card-body" id="info_model1">
-                     <div id="exp_title_model1"></div>
-                    <div id="exp_description_model1"></div>
-                </div> 
-                <div class="card-body" id="info_model2">
-                    <div id="exp_title_model2"></div>
-                   <div id="exp_description_model2"></div>
-               </div> 
-               <div class="card-body" id="info_model3">
-                <div id="exp_title_model3"></div>
-               <div id="exp_description_model3"></div>
-           </div> 
+        <div class="card model-card" id="gallery">
+            <div class="card-header">
+                <!--TODO make this dynamic-->
+                <h4 class="card-title">Gallery</h4>
             </div>
-        </div>
+            <div class="card-body">
+                <div class="gallery" id="model_gallery"></div>           
+            </div>
+        </div> 
     </div>
 
 </div>

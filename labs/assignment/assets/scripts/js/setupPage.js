@@ -14,7 +14,7 @@ function swap(selected)
 
 function loadPage(){
     setTimeout(function(){
-        swap('home');
+        swap('model');
         document.getElementById("restyle").click();
     }, 250);    
 }
@@ -32,11 +32,18 @@ function selectModel(index = 1) {
     $('#model3').hide();
     $('#model' + index.toString()).show();
 
+    //TITLE
+    $('#info_title_model1').hide();
+    $('#info_title_model2').hide();
+    $('#info_title_model3').hide();
+    $('#info_title_model' + index.toString()).show();
+
     //DESCRIPTION
-    $('#info_model1').hide();
-    $('#info_model2').hide();
-    $('#info_model3').hide();
-    $('#info_model' + index.toString()).show();
+    $('#info_description_model1').hide();
+    $('#info_description_model2').hide();
+    $('#info_description_model3').hide();
+    $('#info_description_model' + index.toString()).show();
+
     x3dom.reload();
 }
 
