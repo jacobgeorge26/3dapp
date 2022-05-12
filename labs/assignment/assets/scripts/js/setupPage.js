@@ -14,7 +14,7 @@ function swap(selected)
 
 function loadPage(){
     setTimeout(function(){
-        swap('model');
+        swap('home');
         document.getElementById("restyle").click();
     }, 250);    
 }

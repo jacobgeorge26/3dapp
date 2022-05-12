@@ -1,22 +1,22 @@
-#model-container {
+#model-container, #model_gallery {
     height: auto;
     width: 100%;
     display: flex;
     padding: 10px;
-  }
-  #model3D {
+}
+#model3D {
     width: 75%;
-  }
-  #buttons {
+}
+#buttons {
     width: 25%;
     padding: 0px 5px 5px 0px;
-  }
-  #left{
-      width:50%;
-      padding: 0px 5px 5px 0px;
-  }
-  #right{
+}
+#left, #right{
     width:50%;
+    padding: 0px 5px 5px 0px;
+}
+#col1, #col2, #col3{
+    width:33%;
     padding: 0px 5px 5px 0px;
 }
 
