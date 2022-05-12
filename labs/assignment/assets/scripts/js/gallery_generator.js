@@ -22,7 +22,7 @@ function loadGallery(){
                 htmlCode += '<img class="card-img-top img-thumbnail" src="assets/images/gallery_images/' + response[i] + '"/>';
                 htmlCode += '</a>';
             }
-            document.getElementById('gallery-coke').innerHTML = htmlCode;
+            document.getElementById('model_gallery').innerHTML = htmlCode;
         }
     }
 }

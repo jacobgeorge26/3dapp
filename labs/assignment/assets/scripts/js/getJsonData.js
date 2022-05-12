@@ -28,18 +28,22 @@ function getHtml(jsonObj){
     $('#description_home').html('<p>' + jsonObj.pageTextData[ids["home"]].description + '</p>');
 
     //MODEL 1
-    $('#title_coke').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod1"]].title + '</h3>');
-    $('#description_coke').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod1"]].description + '</p>');
-    $('#exp_title_coke').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod1"]].title + '</h3>');
-    $('#exp_description_coke').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod1"]].description + '</p>');
+    $('#title_model1').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod1"]].title + '</h3>');
+    $('#description_model1').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod1"]].description + '</p>');
+    $('#exp_title_model1').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod1"]].title + '</h3>');
+    $('#exp_description_model1').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod1"]].description + '</p>');
 
     //MODEL 2
-    $('#title_sprite').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod2"]].title + '</h3>');
-    $('#description_sprite').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod2"]].description + '</p>');
+    $('#title_model2').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod2"]].title + '</h3>');
+    $('#description_model2').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod2"]].description + '</p>');
+    $('#exp_title_model2').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod2"]].title + '</h3>');
+    $('#exp_description_model2').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod2"]].description + '</p>');
 
     //MODEL 3
-    $('#title_pepper').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod3"]].title + '</h3>');
-    $('#description_pepper').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod3"]].description + '</p>');
+    $('#title_model3').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod3"]].title + '</h3>');
+    $('#description_model3').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod3"]].description + '</p>');
+    $('#exp_title_model3').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod3"]].title + '</h3>');
+    $('#exp_description_model3').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod3"]].description + '</p>');
 
     //GITHUB LINKS
     $archive = '<a href="'+ jsonObj.pageTextData[ids["urls"]].archive + '"><i class="fa fa-info fa-2x social-icon"></i></a>';
