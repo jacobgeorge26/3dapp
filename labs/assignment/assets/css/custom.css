@@ -81,9 +81,8 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .model3D  {
-    background-image: linear-gradient(white, black);
-    border-radius: var(--rounding);
-    border: 1px solid var(--text);
+    background-color: var(--background-secondary);
+    border: none;
     padding: 2px;
     height: 200px;
 }
