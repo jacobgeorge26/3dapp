@@ -8,7 +8,8 @@ var ids = {
     "imgs":6,
     "info":7,
     "oldCss":8,
-    "newCss":9
+    "newCss":9,
+    "x3dDesc":10
     };
 
 $(document).ready(function(){
@@ -69,6 +70,10 @@ function getHtml(jsonObj){
     $('#info1').html('<a href="' + jsonObj.pageTextData[ids["info"]].info1 + '" class="btn btn-primary">Find out more...</a>');
     $('#info2').html('<a href="' + jsonObj.pageTextData[ids["info"]].info2 + '" class="btn btn-primary">Find out more...</a>');
     $('#info3').html('<a href="' + jsonObj.pageTextData[ids["info"]].info3 + '" class="btn btn-primary">Find out more...</a>');
+
+    $('#description_x3d1').html('<p>' + jsonObj.pageTextData[ids["x3dDesc"]].x3d1 + '</p>')
+    $('#description_x3d2').html('<p>' + jsonObj.pageTextData[ids["x3dDesc"]].x3d1 + '</p>')
+    $('#description_x3d3').html('<p>' + jsonObj.pageTextData[ids["x3dDesc"]].x3d1 + '</p>')
 }
 
 async function getNewCSS(){

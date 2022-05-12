@@ -49,6 +49,11 @@
 			"--text": "white",
 			"--hover": "#0a3755",
 			"--dark-hover": "#0ea2b5"
+		},
+		{
+			"x3d1":"Insert info about model 1 here",
+			"x3d2":"Insert info about model 2 here",
+			"x3d3":"Insert info about model 3 here"
 		}
 	]
 }

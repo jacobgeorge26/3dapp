@@ -44,6 +44,12 @@ function selectModel(index = 1) {
     $('#info_description_model3').hide();
     $('#info_description_model' + index.toString()).show();
 
+    //X3D DESCRIPTION
+    $('#description_x3d1').hide();
+    $('#description_x3d2').hide();
+    $('#description_x3d3').hide();
+    $('#description_x3d'+ index.toString()).show();
+
     x3dom.reload();
 }
 
