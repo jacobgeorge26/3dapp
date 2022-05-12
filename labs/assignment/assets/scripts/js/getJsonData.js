@@ -21,7 +21,6 @@ $(document).ready(function(){
 
 function getData(){
     jQuery.getJSON('./assets/models/data.json', function(jsonObj){
-        console.log(jsonObj);
         getHtml(jsonObj);
     });
 }
@@ -50,7 +49,7 @@ function getHtml(jsonObj){
     $('#info_description_model3').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod3"]].description + '</p>');
 
     //GITHUB LINKS
-    $archive = '<a href="'+ jsonObj.pageTextData[ids["urls"]].archive + '"><i class="fa fa-info fa-2x social-icon"></i></a>';
+    $archive = '<a href="'+ jsonObj.pageTextData[ids["urls"]].archive + '"><i class="fa fa-pencil-square-o fa-2x social-icon"></i></a>';
     $models = '<a href="'+ jsonObj.pageTextData[ids["urls"]].models + '"><i class="fa fa-file-code-o fa-2x social-icon"></i></a>';
     $github = '<a href="'+ jsonObj.pageTextData[ids["urls"]].mainRepo + '"><i class="fa fa-github-square fa-2x social-icon"></i></a>';
     $('#social-links').html($archive + $models + $github);
