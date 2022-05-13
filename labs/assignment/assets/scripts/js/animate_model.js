@@ -15,14 +15,14 @@ function toggleWireframe(){
 var isRunning = false;
 function rotateModel(){
     isRunning = !isRunning;
-    var animation = document.getElementById('model__Rotation');
+    var animation = document.getElementById('model' + getModelNo() + '__Rotation');
     animation.setAttribute('enabled', isRunning.toString());
     switchPlayButton();
 }
 
 var min = 0.1, max = 5;
 function adjustSpeed(step){
-    var animation = document.getElementById('model__Rotation');
+    var animation = document.getElementById('model' + getModelNo() + '__Rotation');
     var speed = animation.getAttribute('cycleInterval');
     var newSpeed = parseFloat(speed) + step;
     //cover bounds
@@ -46,20 +46,23 @@ function switchPlayButton(){
 }
 
 function changeCamera(camera){
-    document.getElementById('model__' + camera).setAttribute('bind', 'true');
+    var cam = document.getElementById('model' + getModelNo() + '__' + camera);
+    cam.setAttribute('bind', 'true');
+    x3dom.reload();
 }
 
 var lightsOn = false;
 function toggleLight(){
     lightsOn = !lightsOn;
-    var animation = document.getElementById('model__Lights');
+    var animation = document.getElementById('model' + getModelNo() + '__Lights');
+    console.log(animation);
     animation.setAttribute('headlight', lightsOn.toString());
 }
 
 var texCount = 0;
 async function shuffleProduct(){
     texCount++;
-    var animation = document.getElementById('model__Texture');
+    var animation = document.getElementById('model' + getModelNo() + '__Texture');
     console.log(animation);
     if(animation != null){
         var index = getModelNo();
@@ -71,7 +74,7 @@ async function shuffleProduct(){
 
 async function setWireframeTex(){
     if(isWireframe){
-        var animation = document.getElementById('model__Texture');
+        var animation = document.getElementById('model' + getModelNo() + '__Texture');
         console.log(animation);
         var url = await getUrl(4);
         var index = getIsDark() ? 0 : 1;
