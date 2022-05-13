@@ -1,0 +1,44 @@
+var isWireframe = false;
+function toggleWireframe(){
+    isWireframe = !isWireframe;
+    document.getElementById('model1').runtime.togglePoints(isWireframe);
+    document.getElementById('model2').runtime.togglePoints(isWireframe);
+    document.getElementById('model3').runtime.togglePoints(isWireframe);
+    document.getElementById('model1').runtime.togglePoints(isWireframe);
+    document.getElementById('model2').runtime.togglePoints(isWireframe);
+    document.getElementById('model3').runtime.togglePoints(isWireframe);
+    x3dom.reload();
+}
+
+var isRunning = false;
+function rotateModel(){
+    isRunning = !isRunning;
+    var animation = document.getElementById('model__model-TIMER');
+    animation.setAttribute('enabled', isRunning.toString());
+    switchPlayButton();
+}
+
+var min = 0.1, max = 5;
+function adjustSpeed(step){
+    var animation = document.getElementById('model__model-TIMER');
+    var speed = animation.getAttribute('cycleInterval');
+    var newSpeed = parseFloat(speed) + step;
+    //cover bounds
+    newSpeed = Math.max(min, newSpeed);
+    newSpeed = Math.min(max, newSpeed);
+    //update speed
+    animation.setAttribute('cycleInterval', newSpeed.toString());
+    rotateModel();
+    rotateModel();
+}
+
+function switchPlayButton(){
+    if(isRunning){
+        $('#pauseAnimation').show();
+        $('#playAnimation').hide();
+    }
+    else{
+        $('#pauseAnimation').hide();
+        $('#playAnimation').show();
+    }
+}

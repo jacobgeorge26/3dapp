@@ -50,15 +50,8 @@ function selectModel(index = 1) {
     $('#description_x3d3').hide();
     $('#description_x3d'+ index.toString()).show();
 
-    x3dom.reload();
-}
+    switchPlayButton();
 
-var isWireframe = false;
-function toggleWireframe(){
-    isWireframe = !isWireframe;
-    document.getElementById('model1').runtime.togglePoints(isWireframe);
-    document.getElementById('model2').runtime.togglePoints(isWireframe);
-    document.getElementById('model3').runtime.togglePoints(isWireframe);
     x3dom.reload();
 }
 

@@ -9,7 +9,7 @@
                 <div class="model3D" id="model3D">
                     <x3d id = "model1">
                         <scene>
-                            <inline url="assets/x3d/fanta.x3d"></inline>
+                            <inline nameSpaceName="model" mapDEFToID="true" url="assets/x3d/fanta.x3d"></inline>
                         </scene>
                     </x3d>
                     <x3d id = "model2">
@@ -31,14 +31,26 @@
                         <div id="render-container">
                             <p class="settings">Rendering</p>
                             <a onclick="toggleWireframe()"class="btn btn-primary">Toggle Wireframe</a>
-                            <a class="btn btn-primary"><i class="fa fa-power-off fa-2x"></i></a>
+                            <a class="btn btn-primary"><i class="fa fa-lightbulb-o fa-2x"></i></a>
                         </div>
 
                         <!--Animation-->
                         <div id="animation-container">
                             <p class="settings">Animation</p>
                             <a class="btn btn-primary">Fall Over</a>
-                            <a class="btn btn-primary"><i class="fa fa-repeat fa-2x"></i></a>
+                            <div id="model-container">
+                                <div id="col1">
+                                    <a onclick="adjustSpeed(0.5)" class="btn btn-primary"><i class="fa fa-step-backward fa-2x"></i></a>
+                                </div>
+                                <div id="col2">
+                                    <a id="playAnimation" onclick="rotateModel()" class="btn btn-primary"><i class="fa fa-play fa-2x"></i></a>
+                                    <a id="pauseAnimation" onclick="rotateModel()" class="btn btn-primary"><i class="fa fa-pause fa-2x"></i></a>
+                                </div>
+                                <div id="col3">
+                                    <a onclick="adjustSpeed(-0.5)" class="btn btn-primary"><i class="fa fa-step-forward fa-2x"></i></a>
+                                </div>
+                            </div>
+                            
 
                         </div>
                         <!--Camera-->
@@ -47,11 +59,11 @@
                             <div id="model-container">                               
                                 <div id="left">
                                     <a class="btn btn-primary">Front</a>
-                                    <a class="btn btn-primary">Left</a>                  
+                                    <a class="btn btn-primary">Above</a>                  
                                 </div>
                                 <div id="right">
                                     <a class="btn btn-primary">Back</a>
-                                    <a class="btn btn-primary">Right</a>
+                                    <a class="btn btn-primary">Below</a>
                                 </div>
                             </div>   
                         </div>
