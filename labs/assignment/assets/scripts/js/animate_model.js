@@ -13,10 +13,13 @@ function toggleWireframe(){
 }
 
 var isRunning = false;
+var noRotations = { "1": 1, "2": 4, "3": 0};
 function rotateModel(){
     isRunning = !isRunning;
-    var animation = document.getElementById('model' + getModelNo() + '__Rotation');
-    animation.setAttribute('enabled', isRunning.toString());
+    for(var i=1;i<=noRotations[getModelNo()];i++){
+        var animation = document.getElementById('model' + getModelNo() + '__Rotation' + i.toString());
+        animation.setAttribute('enabled', isRunning.toString());
+    }
     switchPlayButton();
 }
 
@@ -55,7 +58,6 @@ var lightsOn = false;
 function toggleLight(){
     lightsOn = !lightsOn;
     var animation = document.getElementById('model' + getModelNo() + '__Lights');
-    console.log(animation);
     animation.setAttribute('headlight', lightsOn.toString());
 }
 
