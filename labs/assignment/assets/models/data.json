@@ -54,6 +54,18 @@
 			"x3d1":"Insert info about model 1 here",
 			"x3d2":"Insert info about model 2 here",
 			"x3d3":"Insert info about model 3 here"
+		},
+		{
+			"0":"./textures/fanta-label.jpg",
+			"1":"./textures/coke-label.jpg"
+		},
+		{
+			"0":"./textures/fanta-label.jpg",
+			"1":"./textures/coke-label.jpg"
+		},
+		{
+			"0":"./textures/costa-label.jpg",
+			"1":"./textures/pepsi-label.jpg"
 		}
 	]
 }

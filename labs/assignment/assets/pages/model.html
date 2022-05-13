@@ -31,7 +31,14 @@
                         <div id="render-container">
                             <p class="settings">Rendering</p>
                             <a onclick="toggleWireframe()"class="btn btn-primary">Toggle Wireframe</a>
-                            <a class="btn btn-primary"><i class="fa fa-lightbulb-o fa-2x"></i></a>
+                            <div id="model-container">
+                                <div id="left">
+                                    <a onclick="toggleLight()" class="btn btn-primary"><i class="fa fa-lightbulb-o fa-2x"></i></a>
+                                </div>
+                                <div id="right">
+                                    <a id="texture" class="btn btn-primary"><i class="fa fa-random fa-2x"></i></a>                            
+                                </div>
+                            </div>
                         </div>
 
                         <!--Animation-->

@@ -9,7 +9,10 @@ var ids = {
     "info":7,
     "oldCss":8,
     "newCss":9,
-    "x3dDesc":10
+    "x3dDesc":10,
+    "textures1":11,
+    "textures2":12,
+    "textures3":13
     };
 
 $(document).ready(function(){
@@ -91,5 +94,13 @@ async function getOriginalCSS(){
       });
     var css = await promise;
     return css.pageTextData[ids["oldCss"]];
+}
 
+async function getUrl(index){
+    let promise = new Promise(function(resolve) {
+        resolve(jQuery.getJSON('./assets/models/data.json', function(jsonObj){
+        }));
+      });
+    var textures = await promise;
+    return textures.pageTextData[ids["textures" + index]];
 }

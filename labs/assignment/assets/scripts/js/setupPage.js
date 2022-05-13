@@ -10,22 +10,28 @@ function swap(selected)
     }
 
     document.getElementById("restyle").onclick=async ()=>{ changeLook(); closeToggle()};
+    document.getElementById("texture").onclick=async ()=>{ shuffleProduct()};
 }
 
 function loadPage(){
     setTimeout(function(){
         swap('home');
         document.getElementById("restyle").click(true);
-    }, 250);    
+    }, 500);    
 }
 
 $(document).ready(function() {
     setTimeout(function(){
         selectModel();
-    }, 500);	
+    }, 750);	
 });
 
+var modelNo = 1;
 function selectModel(index = 1) {
+    //sort out variables
+    modelNo = index;
+    resetTexture();
+
     //MODELS
     $('#model1').hide();
     $('#model2').hide();
@@ -53,6 +59,10 @@ function selectModel(index = 1) {
     switchPlayButton();
 
     x3dom.reload();
+}
+
+function getModelNo(){
+    return modelNo;
 }
 
 function closeToggle(){
