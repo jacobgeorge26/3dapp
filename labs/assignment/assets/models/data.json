@@ -61,7 +61,7 @@
 		},
 		{
 			"0":["./textures/sprite-label.jpg", "./textures/sprite-plastic.jpg", "./textures/sprite-cap.jpg", "./textures/sprite-plastic.jpg"],
-			"1":["./textures/sprite-label.jpg", "./textures/sprite-plastic.jpg", "./textures/sprite-cap.jpg", "./textures/sprite-plastic.jpg"]
+			"1":["./textures/pepper-label.jpg", "./textures/pepper-plastic.jpg", "./textures/pepper-cap.jpg", "./textures/pepper-plastic.jpg"]
 		},
 		{
 			"0":["./textures/costa-paper.jpg", "./textures/costa-label.jpg"],
