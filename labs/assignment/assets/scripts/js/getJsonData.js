@@ -65,9 +65,9 @@ function getHtml(jsonObj){
     $('#dropdown').html($item1 + $item2 + $item3);
 
     //HOME PAGE MORE INFO IMAGES
-    $('#img1').html('<a href="#"><img class="card-img-top img-fluid img-thumbnail" src="' + jsonObj.pageTextData[ids["imgs"]].img1 + '" alt="'+ jsonObj.pageTextData[ids["brands"]].brand1 +'"></a>');
-    $('#img2').html('<a href="#"><img class="card-img-top img-fluid img-thumbnail" src="' + jsonObj.pageTextData[ids["imgs"]].img2 + '" alt="'+ jsonObj.pageTextData[ids["brands"]].brand2 +'"></a>');
-    $('#img3').html('<a href="#"><img class="card-img-top img-fluid img-thumbnail" src="' + jsonObj.pageTextData[ids["imgs"]].img3 + '" alt="'+ jsonObj.pageTextData[ids["brands"]].brand3 +'"></a>');
+    $('#img1').html('<a href="javascript:swap(\'model\')" onclick="selectModel(1)"><img class="card-img-top img-fluid img-thumbnail" src="' + jsonObj.pageTextData[ids["imgs"]].img1 + '" alt="'+ jsonObj.pageTextData[ids["brands"]].brand1 +'"></a>');
+    $('#img2').html('<a href="javascript:swap(\'model\')" onclick="selectModel(2)"><img class="card-img-top img-fluid img-thumbnail" src="' + jsonObj.pageTextData[ids["imgs"]].img2 + '" alt="'+ jsonObj.pageTextData[ids["brands"]].brand2 +'"></a>');
+    $('#img3').html('<a href="javascript:swap(\'model\')" onclick="selectModel(3)"><img class="card-img-top img-fluid img-thumbnail" src="' + jsonObj.pageTextData[ids["imgs"]].img3 + '" alt="'+ jsonObj.pageTextData[ids["brands"]].brand3 +'"></a>');
 
     //MORE INFO LINKS
     $('#info1').html('<a href="' + jsonObj.pageTextData[ids["info"]].info1 + '" class="btn btn-primary">Find out more...</a>');
