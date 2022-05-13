@@ -60,14 +60,19 @@ var texCount = 0;
 async function shuffleProduct(){
     texCount++;
     var animation = document.getElementById('model__Texture');
-    var url = await getUrl(getModelNo());
-    texCount = texCount > Object.keys(url).length - 1 ? 0 : texCount;
-    animation.setAttribute('url', url[texCount.toString()]);
+    console.log(animation);
+    if(animation != null){
+        var index = getModelNo();
+        var url = await getUrl(index);
+        texCount = texCount > Object.keys(url).length - 1 ? 0 : texCount;
+        animation.setAttribute('url', url[texCount.toString()]);
+    }
 }
 
 async function setWireframeTex(){
     if(isWireframe){
         var animation = document.getElementById('model__Texture');
+        console.log(animation);
         var url = await getUrl(4);
         var index = getIsDark() ? 0 : 1;
         animation.setAttribute('url', url[index.toString()]);
