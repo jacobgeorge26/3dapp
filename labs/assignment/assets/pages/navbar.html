@@ -13,14 +13,17 @@
             </li>      
         </ul>   
 
-        <button id="toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <button id="toggle" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon fa fa-bars restyle" style="height: 1px"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item ms-auto">
-                    <a class="nav-link" id="restyle" href="#"><i class="fa fa-moon-o fa-2x restyle"></i></a>
+                    <a class="nav-link" id="restyle" href="#">
+                        <i id="isLight" class="fa fa-moon-o fa-2x restyle" style="display:none;"></i>
+                        <i id="isDark" class="fa fa-sun-o fa-2x restyle" style="display:none;"></i>
+                    </a>
                 </li>
                 <li class="nav-item ms-auto">
                     <a onclick="closeToggle()" class="nav-link" href="#">Contact</a>

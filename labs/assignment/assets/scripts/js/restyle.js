@@ -6,9 +6,11 @@ async function changeLook(reset = false){
     switch(counter){
         case 1:
             var css = await getOriginalCSS();
+            switchThemeButton();
         break;
         case 2:
             var css = await getNewCSS();   
+            switchThemeButton();
             counter = 0;
         break;
     }
@@ -18,4 +20,17 @@ async function changeLook(reset = false){
         r.style.setProperty(key, value);
     }
 
+}
+
+function switchThemeButton(){
+    if(counter == 1){
+        //is light - show moon
+        document.getElementById("isDark").style.display = 'none';
+        document.getElementById("isLight").style.display = 'block';
+    }
+    else{
+        //is dark - show sun
+        document.getElementById("isLight").style.display = 'none';
+        document.getElementById("isDark").style.display = 'block';
+    }
 }
