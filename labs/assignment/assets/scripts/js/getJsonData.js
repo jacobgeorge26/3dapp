@@ -75,8 +75,8 @@ function getHtml(jsonObj){
     $('#info3').html('<a href="' + jsonObj.pageTextData[ids["info"]].info3 + '" class="btn btn-primary">Find out more...</a>');
 
     $('#description_x3d1').html('<p>' + jsonObj.pageTextData[ids["x3dDesc"]].x3d1 + '</p>')
-    $('#description_x3d2').html('<p>' + jsonObj.pageTextData[ids["x3dDesc"]].x3d1 + '</p>')
-    $('#description_x3d3').html('<p>' + jsonObj.pageTextData[ids["x3dDesc"]].x3d1 + '</p>')
+    $('#description_x3d2').html('<p>' + jsonObj.pageTextData[ids["x3dDesc"]].x3d2 + '</p>')
+    $('#description_x3d3').html('<p>' + jsonObj.pageTextData[ids["x3dDesc"]].x3d3 + '</p>')
 }
 
 async function getNewCSS(){

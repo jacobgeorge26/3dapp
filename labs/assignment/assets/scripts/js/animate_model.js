@@ -109,4 +109,7 @@ function enableTexSwitch(isEnabled){
 
 function resetTexture(){
     texCount = 0;
+    if(isWireframe){
+        resetWireframe();
+    }
 }

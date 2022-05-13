@@ -17,7 +17,7 @@ function loadGallery(){
 
             for(var i=0;i<response.length;i++){
                 htmlCode += '<div id="col'+ (i+1).toString() +'">';
-                htmlCode += '<a href ="' + 'assets/images/gallery_images/' + response[i] + '">';
+                htmlCode += '<a href="javascript:swap(\'model\')" onclick="selectModel('+ (i+1).toString() +')">';
                 htmlCode += '<img class="card-img-top img-thumbnail" src="assets/images/gallery_images/' + response[i] + '"/>';
                 htmlCode += '</a>';
                 htmlCode += '</div>';
