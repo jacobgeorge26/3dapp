@@ -12,6 +12,11 @@ function toggleWireframe(){
     x3dom.reload();
 }
 
+function resetWireframe(){
+    isWireframe = true;
+    toggleWireframe();
+}
+
 var isRunning = false;
 var noRotations = { "1": 1, "2": 4, "3": 0};
 function rotateModel(){
@@ -25,14 +30,16 @@ function rotateModel(){
 
 var min = 0.1, max = 5;
 function adjustSpeed(step){
-    var animation = document.getElementById('model' + getModelNo() + '__Rotation');
-    var speed = animation.getAttribute('cycleInterval');
-    var newSpeed = parseFloat(speed) + step;
-    //cover bounds
-    newSpeed = Math.max(min, newSpeed);
-    newSpeed = Math.min(max, newSpeed);
-    //update speed
-    animation.setAttribute('cycleInterval', newSpeed.toString());
+    for(var i=1;i<=noRotations[getModelNo()];i++){
+        var animation = document.getElementById('model' + getModelNo() + '__Rotation' + i.toString());
+        var speed = animation.getAttribute('cycleInterval');
+        var newSpeed = parseFloat(speed) + step;
+        //cover bounds
+        newSpeed = Math.max(min, newSpeed);
+        newSpeed = Math.min(max, newSpeed);
+        //update speed
+        animation.setAttribute('cycleInterval', newSpeed.toString());
+    } 
     rotateModel();
     rotateModel();
 }

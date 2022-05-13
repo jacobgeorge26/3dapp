@@ -1,7 +1,7 @@
 #VRML V2.0 utf8
 
 # Produced by 3D Studio MAX VRML97 exporter, Version 24.03, Revision 34.04
-# MAX File: sprite_bottle.max, Date: Fri May 13 21:01:16 2022
+# MAX File: sprite_bottle.max, Date: Fri May 13 22:44:04 2022
 
 DEF Front Viewpoint {
   position 80 17.63 3.505
@@ -15,6 +15,11 @@ DEF NavInfo001 NavigationInfo {
   speed 1
   type "EXAMINE"
   visibilityLimit 0
+}
+DEF Fog Fog {
+  color 1 1 1
+  fogType "LINEAR"
+  visibilityRange 0
 }
 DEF Back Viewpoint {
   position -80 17 0

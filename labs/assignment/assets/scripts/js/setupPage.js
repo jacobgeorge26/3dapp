@@ -31,6 +31,7 @@ function selectModel(index = 1) {
     //sort out variables
     modelNo = index;
     resetTexture();
+    resetWireframe();
 
     //MODELS
     $('#model1').hide();

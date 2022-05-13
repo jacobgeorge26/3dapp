@@ -98,7 +98,8 @@ p.settings{
 
 .card-text, .card-title{
     color:var(--text);
-    margin-top:0px;
+    margin-left:10px;
+    margin-top:5px;
 }
 
 .card.home-card .btn-primary:hover, .card.model-card .btn-primary:hover, .btn.btn-primary:hover{
