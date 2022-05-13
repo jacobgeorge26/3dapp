@@ -12,7 +12,8 @@ var ids = {
     "x3dDesc":10,
     "textures1":11,
     "textures2":12,
-    "textures3":13
+    "textures3":13,
+    "textures4":14
     };
 
 $(document).ready(function(){

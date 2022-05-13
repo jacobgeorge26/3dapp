@@ -33,4 +33,9 @@ function switchThemeButton(){
         document.getElementById("isLight").style.display = 'none';
         document.getElementById("isDark").style.display = 'block';
     }
+    setWireframeTex();
+}
+
+function getIsDark(){
+    return counter == 1 ? false : true;
 }

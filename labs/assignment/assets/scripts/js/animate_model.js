@@ -7,6 +7,8 @@ function toggleWireframe(){
     document.getElementById('model1').runtime.togglePoints(isWireframe);
     document.getElementById('model2').runtime.togglePoints(isWireframe);
     document.getElementById('model3').runtime.togglePoints(isWireframe);
+    enableTexSwitch(!isWireframe);
+    setWireframeTex();
     x3dom.reload();
 }
 
@@ -61,6 +63,28 @@ async function shuffleProduct(){
     var url = await getUrl(getModelNo());
     texCount = texCount > Object.keys(url).length - 1 ? 0 : texCount;
     animation.setAttribute('url', url[texCount.toString()]);
+}
+
+async function setWireframeTex(){
+    if(isWireframe){
+        var animation = document.getElementById('model__Texture');
+        var url = await getUrl(4);
+        var index = getIsDark() ? 0 : 1;
+        animation.setAttribute('url', url[index.toString()]);
+    }
+    else{
+        texCount--;
+        shuffleProduct();
+    }
+}
+
+function enableTexSwitch(isEnabled){
+    if(isEnabled){
+        $('#texture').removeAttr('disabled');
+    }
+    else{
+        $('#texture').attr('disabled','disabled');
+    }
 }
 
 function resetTexture(){

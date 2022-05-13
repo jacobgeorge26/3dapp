@@ -66,6 +66,10 @@
 		{
 			"0":"./textures/costa-label.jpg",
 			"1":"./textures/pepsi-label.jpg"
+		},
+		{
+			"0":"./textures/wireframe-dark.jpg",
+			"1":"./textures/wireframe-light.jpg"
 		}
 	]
 }

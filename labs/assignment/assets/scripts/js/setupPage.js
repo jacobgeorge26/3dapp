@@ -10,7 +10,7 @@ function swap(selected)
     }
 
     document.getElementById("restyle").onclick=async ()=>{ changeLook(); closeToggle()};
-    document.getElementById("texture").onclick=async ()=>{ shuffleProduct()};
+    document.getElementById("texture").onclick=async ()=>{ shuffleProduct(getModelNo())};
 }
 
 function loadPage(){
