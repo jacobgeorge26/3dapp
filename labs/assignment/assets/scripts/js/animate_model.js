@@ -42,3 +42,7 @@ function switchPlayButton(){
         $('#playAnimation').show();
     }
 }
+
+function changeCamera(camera){
+    document.getElementById('model__' + camera).setAttribute('bind', 'true');
+}

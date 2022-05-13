@@ -1,7 +1,7 @@
 #VRML V2.0 utf8
 
 # Produced by 3D Studio MAX VRML97 exporter, Version 24.03, Revision 34.04
-# MAX File: coke_can.max, Date: Fri May 13 00:07:02 2022
+# MAX File: coke_can.max, Date: Fri May 13 13:39:35 2022
 
 DEF NavInfo001 NavigationInfo {
   avatarSize [0.25, 1.6, 0.75]
@@ -36,6 +36,7 @@ DEF Below Viewpoint {
 }
 DEF CokeCan Transform {
   translation 0 5 0
+  rotation 0 1 0 -1.292
   scale 0.5517 0.5517 0.5517
   children [
   DEF CokeCan-TIMER TimeSensor { loop FALSE cycleInterval 1.967 },
@@ -51,12 +52,12 @@ DEF CokeCan Transform {
     key [0, 0.05085, 0.1017, 0.1525, 0.2034, 0.2542, 0.3051, 0.3559, 
         0.4068, 0.4576, 0.5085, 0.5593, 0.6102, 0.661, 0.7119, 0.7627, 
         0.8136, 0.8644, 0.9153, 0.9661, 1, ]
-    keyValue [1 0 0 0, 0 -1 0 -0.2639, 0 -1 0 -0.6283, 0 -1 0 -0.9425, 
-      0 -1 0 -1.257, 0 -1 0 -1.571, 0 -1 0 -1.885, 0 -1 0 -2.199, 
-      0 -1 0 -2.513, 0 -1 0 -2.827, 0 -1 0 -3.142, 0 -1 0 -3.456, 
-      0 -1 0 -3.77, 0 -1 0 -4.084, 0 1 0 -1.885, 0 1 0 -1.571, 
-      0 1 0 -1.257, 0 1 0 -0.9425, 0 1 0 -0.6283, 0 1 0 -0.2639, 
-      0 1 0 -0.0377, ] },
+    keyValue [0 1 0 -1.292, 0 1 0 -1.028, 0 1 0 -0.664, 0 1 0 -0.3499, 
+      0 1 0 -0.0357, 0 -1 0 -0.2785, 0 -1 0 -0.5926, 0 -1 0 -0.9068, 
+      0 -1 0 -1.221, 0 -1 0 -1.535, 0 -1 0 -1.849, 0 -1 0 -2.163, 
+      0 -1 0 -2.478, 0 -1 0 -2.792, 0 -1 0 -3.106, 0 -1 0 -3.42, 
+      0 -1 0 -3.734, 0 -1 0 -4.048, 0 1 0 -1.921, 0 1 0 -1.556, 
+      0 1 0 -1.33, ] },
     Shape {
       appearance Appearance {
         material Material {
