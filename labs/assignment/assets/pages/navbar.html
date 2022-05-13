@@ -13,9 +13,9 @@
             </li>      
         </ul>   
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <button id="toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-light fas fa-bars" style="height: 1px"></span>
+            <span class="navbar-toggler-icon fa fa-bars restyle" style="height: 1px"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
@@ -23,13 +23,13 @@
                     <a class="nav-link" id="restyle" href="#"><i class="fa fa-moon-o fa-2x restyle"></i></a>
                 </li>
                 <li class="nav-item ms-auto">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a onclick="closeToggle()" class="nav-link" href="#">Contact</a>
                 </li>
                 <li class="nav-item ms-auto">
-                    <a class="nav-link" href="#">Originality</a>
+                    <a onclick="closeToggle()" class="nav-link" href="#">Originality</a>
                 </li>
                 <li class="nav-item ms-auto">
-                    <a class="nav-link" href="#">References</a>
+                    <a onclick="closeToggle()" class="nav-link" href="#">References</a>
                 </li>
             <li class="nav-item dropdown ms-auto">
                     <a class="nav-link dropdown-toggle" href='#' id="navbardrop" data-toggle="dropdown" aria-expanded="false">

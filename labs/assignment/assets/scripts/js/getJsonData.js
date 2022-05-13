@@ -55,9 +55,9 @@ function getHtml(jsonObj){
     $('#social-links').html($archive + $models + $github);
 
     //DROPDOWN ITEMS
-    $item1 = '<li><a class="dropdown-item" href="javascript:swap(\'model\')" onclick="selectModel(1)">' + jsonObj.pageTextData[ids["brands"]].brand1 + '</a></li>';
-    $item2 = '<li><a class="dropdown-item" href="javascript:swap(\'model\')" onclick="selectModel(2)">' + jsonObj.pageTextData[ids["brands"]].brand2 + '</a></li>';
-    $item3 = '<li><a class="dropdown-item" href="javascript:swap(\'model\')" onclick="selectModel(3)">' + jsonObj.pageTextData[ids["brands"]].brand3 + '</a></li>';
+    $item1 = '<li><a class="dropdown-item" href="javascript:swap(\'model\')" onclick="closeToggle(); selectModel(1)">' + jsonObj.pageTextData[ids["brands"]].brand1 + '</a></li>';
+    $item2 = '<li><a class="dropdown-item" href="javascript:swap(\'model\')" onclick="closeToggle(); selectModel(2)">' + jsonObj.pageTextData[ids["brands"]].brand2 + '</a></li>';
+    $item3 = '<li><a class="dropdown-item" href="javascript:swap(\'model\')" onclick="closeToggle(); selectModel(3)">' + jsonObj.pageTextData[ids["brands"]].brand3 + '</a></li>';
     $('#dropdown').html($item1 + $item2 + $item3);
 
     //HOME PAGE MORE INFO IMAGES

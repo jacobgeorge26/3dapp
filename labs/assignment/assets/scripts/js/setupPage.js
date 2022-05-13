@@ -9,7 +9,7 @@ function swap(selected)
         loadGallery();
     }
 
-    document.getElementById("restyle").onclick=async ()=>{ changeLook()};
+    document.getElementById("restyle").onclick=async ()=>{ changeLook(); closeToggle()};
 }
 
 function loadPage(){
@@ -53,6 +53,14 @@ function selectModel(index = 1) {
     switchPlayButton();
 
     x3dom.reload();
+}
+
+function closeToggle(){
+    var toggle = document.getElementById("toggle");
+    var isOpen = !toggle.classList.contains("collapsed");
+    if(isOpen){
+        toggle.click();
+    }
 }
 
 
