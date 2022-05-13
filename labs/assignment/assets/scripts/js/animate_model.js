@@ -62,25 +62,28 @@ function toggleLight(){
 }
 
 var texCount = 0;
+var noTextures = { "1": 1, "2": 4, "3": 2};
 async function shuffleProduct(){
     texCount++;
-    var animation = document.getElementById('model' + getModelNo() + '__Texture');
-    console.log(animation);
-    if(animation != null){
-        var index = getModelNo();
-        var url = await getUrl(index);
-        texCount = texCount > Object.keys(url).length - 1 ? 0 : texCount;
-        animation.setAttribute('url', url[texCount.toString()]);
+    var index = getModelNo();
+    var url = await getUrl(index);
+    for(var i=1;i<=noTextures[getModelNo()];i++){
+        var animation = document.getElementById('model' + getModelNo() + '__Texture' + i.toString());
+        if(animation != null){
+            texCount = texCount > Object.keys(url).length - 1 ? 0 : texCount;
+            animation.setAttribute('url', url[texCount.toString()][i - 1]);
+        }
     }
 }
 
 async function setWireframeTex(){
     if(isWireframe){
-        var animation = document.getElementById('model' + getModelNo() + '__Texture');
-        console.log(animation);
-        var url = await getUrl(4);
-        var index = getIsDark() ? 0 : 1;
-        animation.setAttribute('url', url[index.toString()]);
+        for(var i=1;i<=noTextures[getModelNo()];i++){
+            var animation = document.getElementById('model' + getModelNo() + '__Texture' + i.toString());
+            var url = await getUrl(4);
+            var index = getIsDark() ? 0 : 1;
+            animation.setAttribute('url', url[index.toString()]);
+        }
     }
     else{
         texCount--;

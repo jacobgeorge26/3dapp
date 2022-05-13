@@ -35,21 +35,21 @@ function getHtml(jsonObj){
     $('#description_home').html('<p>' + jsonObj.pageTextData[ids["home"]].description + '</p>');
 
     //MODEL 1
-    $('#title_model1').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod1"]].title + '</h3>');
+    $('#title_model1').html('<h4 class="card-title">' + jsonObj.pageTextData[ids["mod1"]].title + '</h4>');
     $('#description_model1').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod1"]].description + '</p>');
-    $('#info_title_model1').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod1"]].title + '</h3>');
+    $('#info_title_model1').html('<h4 class="card-title">' + jsonObj.pageTextData[ids["mod1"]].title + '</h4>');
     $('#info_description_model1').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod1"]].description + '</p>');
 
     //MODEL 2
-    $('#title_model2').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod2"]].title + '</h3>');
+    $('#title_model2').html('<h4 class="card-title">' + jsonObj.pageTextData[ids["mod2"]].title + '</h4>');
     $('#description_model2').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod2"]].description + '</p>');
-    $('#info_title_model2').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod2"]].title + '</h3>');
+    $('#info_title_model2').html('<h4 class="card-title">' + jsonObj.pageTextData[ids["mod2"]].title + '</h4>');
     $('#info_description_model2').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod2"]].description + '</p>');
 
     //MODEL 3
-    $('#title_model3').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod3"]].title + '</h3>');
+    $('#title_model3').html('<h4 class="card-title">' + jsonObj.pageTextData[ids["mod3"]].title + '</h4>');
     $('#description_model3').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod3"]].description + '</p>');
-    $('#info_title_model3').html('<h3 class="card-title">' + jsonObj.pageTextData[ids["mod3"]].title + '</h3>');
+    $('#info_title_model3').html('<h4 class="card-title">' + jsonObj.pageTextData[ids["mod3"]].title + '</h4>');
     $('#info_description_model3').html('<p class="card-text">' + jsonObj.pageTextData[ids["mod3"]].description + '</p>');
 
     //GITHUB LINKS

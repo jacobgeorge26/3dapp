@@ -60,6 +60,7 @@ p.settings{
     border-top-left-radius: var(--rounding);
     border-top-right-radius: var(--rounding);
     border: 1px solid var(--text);
+    text-align: center;
 }
 
 .card.home-card .card-text, .card.model-card .card-text{
@@ -97,6 +98,7 @@ p.settings{
 
 .card-text, .card-title{
     color:var(--text);
+    margin-top:0px;
 }
 
 .card.home-card .btn-primary:hover, .card.model-card .btn-primary:hover, .btn.btn-primary:hover{

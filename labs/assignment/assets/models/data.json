@@ -56,16 +56,16 @@
 			"x3d3":"Insert info about model 3 here"
 		},
 		{
-			"0":"./textures/fanta-label.jpg",
-			"1":"./textures/coke-label.jpg"
+			"0":["./textures/fanta-label.jpg"],
+			"1":["./textures/coke-label.jpg"]
 		},
 		{
-			"0":"./textures/fanta-label.jpg",
-			"1":"./textures/coke-label.jpg"
+			"0":["./textures/sprite-label.jpg", "./textures/sprite-plastic.jpg", "./textures/sprite-cap.jpg", "./textures/sprite-plastic.jpg"],
+			"1":["./textures/sprite-label.jpg", "./textures/sprite-plastic.jpg", "./textures/sprite-cap.jpg", "./textures/sprite-plastic.jpg"]
 		},
 		{
-			"0":"./textures/costa-label.jpg",
-			"1":"./textures/pepsi-label.png"
+			"0":["./textures/costa-paper.jpg", "./textures/costa-label.jpg"],
+			"1":["./textures/costa-paper.jpg", "./textures/pepsi-label.png"]
 		},
 		{
 			"0":"./textures/wireframe-dark.jpg",
