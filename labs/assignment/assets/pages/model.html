@@ -49,14 +49,14 @@
                             <a class="btn btn-primary">Fall Over</a>
                             <div id="model-container">
                                 <div id="col1">
-                                    <a onclick="adjustSpeed(0.5)" class="btn btn-primary"><i class="fa fa-step-backward fa-2x"></i></a>
+                                    <a id="slow" onclick="adjustSpeed(0.5)" class="btn btn-primary"><i class="fa fa-step-backward fa-2x"></i></a>
                                 </div>
                                 <div id="col2">
                                     <a id="playAnimation" onclick="rotateModel()" class="btn btn-primary"><i class="fa fa-play fa-2x"></i></a>
                                     <a id="pauseAnimation" onclick="rotateModel()" class="btn btn-primary"><i class="fa fa-pause fa-2x"></i></a>
                                 </div>
                                 <div id="col3">
-                                    <a onclick="adjustSpeed(-0.5)" class="btn btn-primary"><i class="fa fa-step-forward fa-2x"></i></a>
+                                    <a id="fast" onclick="adjustSpeed(-0.5)" class="btn btn-primary"><i class="fa fa-step-forward fa-2x"></i></a>
                                 </div>
                             </div>
                             
@@ -67,12 +67,12 @@
                             <p class="settings">Viewpoint</p>
                             <div id="model-container">                               
                                 <div id="left">
-                                    <a onclick="changeCamera('Front')" class="btn btn-primary">Front</a>
-                                    <a onclick="changeCamera('Above')" class="btn btn-primary">Above</a>                  
+                                    <a id="Front" onclick="changeCamera('Front')" disabled="disabled" class="btn btn-primary">Front</a>
+                                    <a id="Above" onclick="changeCamera('Above')" class="btn btn-primary">Above</a>                  
                                 </div>
                                 <div id="right">
-                                    <a onclick="changeCamera('Back')" class="btn btn-primary">Back</a>
-                                    <a onclick="changeCamera('Below')" class="btn btn-primary">Below</a>
+                                    <a id="Back" onclick="changeCamera('Back')" class="btn btn-primary">Back</a>
+                                    <a id="Below" onclick="changeCamera('Below')" class="btn btn-primary">Below</a>
                                 </div>
                             </div>   
                         </div>

@@ -20,6 +20,7 @@ function resetWireframe(){
 function resetModel(){
     rotateModel(true);
     toggleLight(true);
+    resetCamera();
 }
 
 var isRunning = false;
@@ -53,10 +54,14 @@ function switchPlayButton(){
     if(isRunning){
         $('#pauseAnimation').show();
         $('#playAnimation').hide();
+        $('#fast').removeAttr('disabled');
+        $('#slow').removeAttr('disabled');
     }
     else{
         $('#pauseAnimation').hide();
         $('#playAnimation').show();
+        $('#fast').attr('disabled','disabled');
+        $('#slow').attr('disabled','disabled');
     }
 }
 
@@ -64,6 +69,12 @@ function changeCamera(camera){
     var cam = document.getElementById('model' + getModelNo() + '__' + camera);
     cam.setAttribute('bind', 'true');
     x3dom.reload();
+    //update buttons
+    $('#Front').removeAttr('disabled');
+    $('#Back').removeAttr('disabled');
+    $('#Above').removeAttr('disabled');
+    $('#Below').removeAttr('disabled');
+    $('#'+camera).attr('disabled','disabled');
 }
 
 var lightsOn = false;
@@ -117,4 +128,8 @@ function enableTexSwitch(isEnabled){
 function resetTexture(){
     texCount = 0;
     resetWireframe();
+}
+
+function resetCamera(){
+    changeCamera("Front");
 }
