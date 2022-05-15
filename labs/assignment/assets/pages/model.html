@@ -5,26 +5,28 @@
             <div class="card-header">
                 <h4 class="card-title">X3D Model</h4>
             </div>
-            <div class="card-body">
-                <div class="model3D" id="model3D">
-                    <x3d id = "model1">
-                        <scene>
-                            <inline nameSpaceName="model1" mapDEFToID="true" url="assets/x3d/fanta.x3d"></inline>
-                        </scene>
-                    </x3d>
-                    <x3d id = "model2">
-                        <scene>
-                            <inline nameSpaceName="model2" mapDEFToID="true" url="assets/x3d/sprite.x3d"></inline>
-                        </scene>
-                    </x3d>
-                    <x3d id = "model3">
-                        <scene>
-                            <inline nameSpaceName="model3" mapDEFToID="true" url="assets/x3d/costa.x3d"></inline>
-                        </scene>
-                    </x3d>
+            <div id="model-body">
+                <!--Main model section-->
+                <div class="card-body" id="model-main">
+                    <div class="model3D" id="model3D">
+                        <x3d id = "model1">
+                            <scene>
+                                <inline nameSpaceName="model1" mapDEFToID="true" url="assets/x3d/fanta.x3d"></inline>
+                            </scene>
+                        </x3d>
+                        <x3d id = "model2">
+                            <scene>
+                                <inline nameSpaceName="model2" mapDEFToID="true" url="assets/x3d/sprite.x3d"></inline>
+                            </scene>
+                        </x3d>
+                        <x3d id = "model3">
+                            <scene>
+                                <inline nameSpaceName="model3" mapDEFToID="true" url="assets/x3d/costa.x3d"></inline>
+                            </scene>
+                        </x3d>
+                    </div>
                 </div>
-            </div>
-            <div class="card model-card">
+                <!--Settings section-->
                 <div class="card-body" id="model-settings">
                     <div id="settings-container">
                         <!--Rendering-->
@@ -40,7 +42,7 @@
                                 </div>
                             </div>
                         </div>
-
+    
                         <!--Animation-->
                         <div id="animation-container">
                             <p class="settings">Animation</p>
@@ -58,7 +60,7 @@
                                 </div>
                             </div>
                             
-
+    
                         </div>
                         <!--Camera-->
                         <div id="camera-container">
@@ -75,12 +77,15 @@
                             </div>   
                         </div>
                     </div>
-                        
-                    <div class="card-text" id="description_x3d1"></div>
-                    <div class="card-text" id="description_x3d2"></div>
-                    <div class="card-text" id="description_x3d3"></div>
                 </div>
             </div>
+            <div class="card-footer">
+                <div class="card-text" id="description_x3d1"></div>
+                <div class="card-text" id="description_x3d2"></div>
+                <div class="card-text" id="description_x3d3"></div>
+            </div>
+
+
             
         </div> 
     </div>
