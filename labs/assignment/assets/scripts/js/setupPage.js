@@ -22,12 +22,12 @@ function loadPage(){
 
 $(document).ready(function() {
     setTimeout(function(){
-        selectModel();
-    }, 750);	
+        selectModel(modelNo, true);
+    }, 600);	
 });
 
 var modelNo = 1;
-function selectModel(index = 1) {
+function selectModel(index = 1, skipReset = false) {
     //sort out variables
     modelNo = index;
     resetTexture();
@@ -56,7 +56,9 @@ function selectModel(index = 1) {
     $('#description_x3d3').hide();
     $('#description_x3d'+ index.toString()).show();
 
-    resetModel();
+    if(!skipReset) {
+        resetModel();
+    }
   
     x3dom.reload();
 }
