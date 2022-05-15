@@ -80,6 +80,13 @@ p.settings{
     border: 1px solid var(--text);
     border-bottom: none;
 }
+.card.model-card .gallery-img{
+    background-color: transparent;
+    border: none;
+    max-width: 100%;
+    height: auto;
+    padding: 0px;
+}
 
 
 #info1, #info2, #info3{

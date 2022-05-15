@@ -29,6 +29,9 @@
 			           scale="1.000000 1.000000 1.000000"
 			           rotation="0.000000 1.000000 0.000000 0.000000"
 			           >
+				<TimeSensor DEF='Rotation1' cycleInterval='1.967' loop='true' enabled='true'/>
+				<PositionInterpolator DEF='Cylinder002-POS-INTERP' key='0 0.05085 0.1017 0.1525 0.2034 0.2542 0.3051 0.3559 0.4068 0.4576 0.5085 0.5593 0.6102 0.661 0.7119 0.7627 0.8136 0.8644 0.9153 0.9661 1' keyValue='0.3876 10 0.4204 0.3876 10.5 0.4204 0.3876 11.2 0.4204 0.3876 11.8 0.4204 0.3876 12.5 0.4204 0.3876 13 0.4204 0.3876 12.5 0.4204 0.3876 11.8 0.4204 0.3876 11.2 0.4204 0.3876 10.6 0.4204 0.3876 10 0.4204 0.3876 9.4 0.4204 0.3876 8.8 0.4204 0.3876 8.2 0.4204 0.3876 7.504 0.4204 0.3876 7 0.4204 0.3876 7.504 0.4204 0.3876 8.2 0.4204 0.3876 8.8 0.4204 0.3876 9.496 0.4204 0.3876 9.928 0.4204'/>
+				<OrientationInterpolator DEF='Cylinder002-ROT-INTERP' key='0 0.05085 0.1017 0.1525 0.2034 0.2542 0.3051 0.3559 0.4068 0.4576 0.5085 0.5593 0.6102 0.661 0.7119 0.7627 0.8136 0.8644 0.9153 0.9661 1' keyValue='1 0 0 0 0 -1 0 -0.2639 0 -1 0 -0.6283 0 -1 0 -0.9425 0 -1 0 -1.257 0 -1 0 -1.571 0 -1 0 -1.885 0 -1 0 -2.199 0 -1 0 -2.513 0 -1 0 -2.827 0 -1 0 -3.142 0 -1 0 -3.456 0 -1 0 -3.77 0 -1 0 -4.084 0 1 0 -1.885 0 1 0 -1.571 0 1 0 -1.257 0 1 0 -0.9425 0 1 0 -0.6283 0 1 0 -0.2639 0 1 -1.276e-05 -0.0377'/>
 				<Group DEF="group_ME_Circle">
 					<Shape>
 						<Appearance>
@@ -61,6 +64,10 @@
 				</Group>
 			</Transform>
 		</Transform>
+    <ROUTE fromNode='Rotation1' fromField='fraction_changed' toNode='Cylinder002-POS-INTERP' toField='set_fraction'/>
+    <ROUTE fromNode='Cylinder002-POS-INTERP' fromField='value_changed' toNode='model3' toField='set_translation'/>
+    <ROUTE fromNode='Rotation1' fromField='fraction_changed' toNode='Cylinder002-ROT-INTERP' toField='set_fraction'/>
+    <ROUTE fromNode='Cylinder002-ROT-INTERP' fromField='value_changed' toNode='model3' toField='set_rotation'/>
 		<Transform DEF="Light_001_TRANSFORM"
 		           translation="0.019072 -6.628598 -0.023678"
 		           scale="1.000000 1.000000 1.000000"
@@ -111,3 +118,6 @@
 		</Transform>
 	</Scene>
 </X3D>
+
+
+
