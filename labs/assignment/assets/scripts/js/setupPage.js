@@ -56,8 +56,8 @@ function selectModel(index = 1) {
     $('#description_x3d3').hide();
     $('#description_x3d'+ index.toString()).show();
 
-    switchPlayButton();
-
+    resetModel();
+  
     x3dom.reload();
 }
 

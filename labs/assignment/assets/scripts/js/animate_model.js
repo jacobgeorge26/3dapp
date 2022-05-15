@@ -17,10 +17,16 @@ function resetWireframe(){
     toggleWireframe();
 }
 
+function resetModel(){
+    isRunning = false;
+    rotateModel();
+}
+
 var isRunning = false;
-var noRotations = { "1": 1, "2": 4, "3": 0};
+var noRotations = { "1": 1, "2": 4, "3": 1};
 function rotateModel(){
     isRunning = !isRunning;
+    console.log(isRunning + " model " + getModelNo());
     for(var i=1;i<=noRotations[getModelNo()];i++){
         var animation = document.getElementById('model' + getModelNo() + '__Rotation' + i.toString());
         animation.setAttribute('enabled', isRunning.toString());
