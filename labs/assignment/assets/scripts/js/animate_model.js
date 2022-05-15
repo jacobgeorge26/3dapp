@@ -27,8 +27,7 @@ var noRotations = { "1": 1, "2": 4, "3": 1};
 function rotateModel(fixedOn = false){
     isRunning = fixedOn ? true : !isRunning;
     for(var i=1;i<=noRotations[getModelNo()];i++){
-        var animation = document.getElementById('model' + getModelNo() + '__Rotation' + i.toString());  
-        console.log(animation);      
+        var animation = document.getElementById('model' + getModelNo() + '__Rotation' + i.toString());     
         animation.setAttribute('enabled', isRunning.toString());
     }
     switchPlayButton();
@@ -117,7 +116,5 @@ function enableTexSwitch(isEnabled){
 
 function resetTexture(){
     texCount = 0;
-    if(isWireframe){
-        resetWireframe();
-    }
+    resetWireframe();
 }

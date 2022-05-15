@@ -30,7 +30,7 @@ var modelNo = 1;
 function selectModel(index = 1, skipReset = false) {
     //sort out variables
     modelNo = index;
-    resetTexture();
+    if(!skipReset) resetTexture();
 
     //MODELS
     $('#model1').hide();
