@@ -2,7 +2,7 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
 <X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
   <Scene DEF='scene'>
-    <NavigationInfo DEF='Lights' headlight='false' type='"EXAMINE"'/>
+    <NavigationInfo DEF='Lights' headlight='true' type='"EXAMINE"'/>
 	<Viewpoint DEF='Front' description='Front' orientation='-0.002323 1 0.002323 -1.571' position='-160 26.05 -11.47' fieldOfView='0.6024'/>
     <Viewpoint DEF='Back' description='Back' orientation='0 -1 0 -1.571' position='160 33 0' fieldOfView='0.6024'/>
     <Viewpoint DEF='Above' description='Above' orientation='0.3693 0.8528 0.3693 -1.729' position='-72.18 125.1 -0.8051' fieldOfView='0.6024'/>
