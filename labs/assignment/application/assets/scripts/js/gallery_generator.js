@@ -4,7 +4,7 @@ function loadGallery(){
     var htmlCode = "";
 
     var response;
-    var send = "../application/view/hook.php";
+    var send = "./application/view/hook.php";
 
     xmlHttp.open("GET", send, true);
     xmlHttp.send(null);
