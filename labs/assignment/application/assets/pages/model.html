@@ -1,0 +1,122 @@
+<div class="main-contents">
+    <div class="row">
+        <!-- model-->
+        <div class="card model-card">
+            <div class="card-header">
+                <h4 class="card-title">X3D Model</h4>
+            </div>
+            <div id="model-body">
+                <!--Main model section-->
+                <div class="card-body" id="model-main">
+                    <div class="model3D" id="model3D">
+                        <x3d id = "model1">
+                            <scene>
+                                <inline nameSpaceName="model1" mapDEFToID="true" url="assets/x3d/fanta.x3d"></inline>
+                            </scene>
+                        </x3d>
+                        <x3d id = "model2">
+                            <scene>
+                                <inline nameSpaceName="model2" mapDEFToID="true" url="assets/x3d/sprite.x3d"></inline>
+                            </scene>
+                        </x3d>
+                        <x3d id = "model3">
+                            <scene>
+                                <inline nameSpaceName="model3" mapDEFToID="true" url="assets/x3d/costa.x3d"></inline>
+                            </scene>
+                        </x3d>
+                    </div>
+                </div>
+                <!--Settings section-->
+                <div class="card-body" id="model-settings">
+                    <div id="settings-container">
+                        <!--Rendering-->
+                        <div id="render-container">
+                            <p class="settings">Rendering</p>
+                            <a onclick="toggleWireframe()"class="btn btn-primary">Toggle Wireframe</a>
+                            <div id="model-container">
+                                <div id="left">
+                                    <a onclick="toggleLight()" class="btn btn-primary"><i class="fa fa-lightbulb-o fa-2x"></i></a>
+                                </div>
+                                <div id="right">
+                                    <a id="texture" class="btn btn-primary"><i class="fa fa-random fa-2x"></i></a>                            
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!--Animation-->
+                        <div id="animation-container">
+                            <p class="settings">Animation</p>
+                            <a class="btn btn-primary">Fall Over</a>
+                            <div id="model-container">
+                                <div id="col1">
+                                    <a id="slow" onclick="adjustSpeed(0.5)" class="btn btn-primary"><i class="fa fa-step-backward fa-2x"></i></a>
+                                </div>
+                                <div id="col2">
+                                    <a id="playAnimation" onclick="rotateModel()" class="btn btn-primary"><i class="fa fa-play fa-2x"></i></a>
+                                    <a id="pauseAnimation" onclick="rotateModel()" class="btn btn-primary"><i class="fa fa-pause fa-2x"></i></a>
+                                </div>
+                                <div id="col3">
+                                    <a id="fast" onclick="adjustSpeed(-0.5)" class="btn btn-primary"><i class="fa fa-step-forward fa-2x"></i></a>
+                                </div>
+                            </div>
+                            
+    
+                        </div>
+                        <!--Camera-->
+                        <div id="camera-container">
+                            <p class="settings">Viewpoint</p>
+                            <div id="model-container">                               
+                                <div id="left">
+                                    <a id="Front" onclick="changeCamera('Front')" disabled="disabled" class="btn btn-primary">Front</a>
+                                    <a id="Above" onclick="changeCamera('Above')" class="btn btn-primary">Above</a>                  
+                                </div>
+                                <div id="right">
+                                    <a id="Back" onclick="changeCamera('Back')" class="btn btn-primary">Back</a>
+                                    <a id="Below" onclick="changeCamera('Below')" class="btn btn-primary">Below</a>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="card-text" id="description_x3d1"></div>
+                <div class="card-text" id="description_x3d2"></div>
+                <div class="card-text" id="description_x3d3"></div>
+            </div>
+
+
+            
+        </div> 
+    </div>
+
+    <!--description-->
+    <div class="row">
+        <div class="card model-card">
+            <div class="card-header">
+                <div id="info_title_model1"></div>
+                <div id="info_title_model2"></div>
+                <div id="info_title_model3"></div>
+            </div>
+            <div class="card-body">              
+                <div id="info_description_model1"></div>  
+                <div id="info_description_model2"></div>  
+                <div id="info_description_model3"></div>     
+            </div> 
+        </div>
+    </div>
+
+    <!--gallery-->
+    <div class="row">
+        <div class="card model-card" id="gallery">
+            <div class="card-header">
+                <h4 class="card-title">Gallery</h4>
+            </div>
+            <div class="card-body">
+                <div id="model_gallery">
+                </div>
+            </div>
+        </div> 
+    </div>
+
+</div>

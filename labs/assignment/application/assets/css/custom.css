@@ -1,0 +1,124 @@
+:root {
+    --background: #a6b5bc;
+    --background-secondary: #cddcdc;
+    --text: black;
+    --hover: #a6b5bc;
+    --dark-hover: #0a7d8c;
+    --rounding: 5px;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/Open_Sans/OpenSans-Regular.TTF);
+}
+
+body{
+    padding-top: 5px;
+    background-color: var(--background)!important;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Oswald', sans-serif;
+}
+
+.container.main_contents{
+    padding-top: 25px;
+    width: auto;
+    max-width: max-content;
+}
+#main_3d_image{
+    background-image: url(../images/main_3D.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    box-shadow: 0 0 8px 8px var(--background) inset;
+}
+#main_text {
+    float: left;
+    margin: 5%;
+    width: 90%;
+    display: block;
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: var(--rounding);
+}
+
+#main_text h2 {
+    color: var(--text);
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+#main_text h3 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#main_text p {
+    font-size: 12px;
+    margin: 0px;
+    line-height: 1.2;
+} 
+
+.gallery-header {
+    color: var(--background);
+}
+
+.gallery-header:hover {
+    color: var(--hover);
+    border: 1px solid transparent;
+}
+
+.main-contents{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.model3D  {
+    background-color: var(--background-secondary);
+    border: none;
+    padding: 2px;
+    height: 200px;
+}
+
+X3D, x3d {
+    border: none;
+    width: 100%;
+    height: 100%
+
+}
+
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+    .main_contents{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .img-thumbnail {
+        margin-top: 4px;
+    }
+}
+/*Min formatting for 576px is currently working for larger formats. See other css files for custom device size css*/
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) { 
+
+} */
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { 
+    
+} */
+/* X-Large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) { 
+
+}  */
+/* XX-Large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1400px) { 
+
+} */
