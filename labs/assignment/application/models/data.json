@@ -27,9 +27,9 @@
 			"brand3":"Costa"
 		},
 		{
-			"img1":"assets/images/fanta.jpg",
-			"img2":"assets/images/sprite.jpg",
-			"img3":"assets/images/costa.jpg"
+			"img1":"./application/assets/images/fanta.jpg",
+			"img2":"./application/assets/images/sprite.jpg",
+			"img3":"./application/assets/images/costa.jpg"
 		},
 		{
 			"info1":"https://www.coca-cola.co.uk/brands/fanta",

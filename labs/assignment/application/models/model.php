@@ -29,7 +29,7 @@ class Model {
 	public function dbCreateTable()
 	{
 		try {
-			$this->dbhandle->exec("CREATE TABLE Model_3D (Id INTEGER PRIMARY KEY, brand TEXT, x3dModelTitle TEXT, x3dCreationMethod TEXT, modelTitle TEXT, modelSubtitle TEXT, modelDescription TEXT)");
+			$this->dbhandle->exec("CREATE TABLE Model_3D (Id INTEGER PRIMARY KEY, brand TEXT, x3dModelTitle TEXT, x3dCreationMethod TEXT, modelTitle TEXT, modelDescription TEXT)");
 			return "Model_3D table is successfully created inside test1.db file";
 		}
 		catch (PD0EXception $e){
@@ -51,12 +51,12 @@ class Model {
 	{
 		try{
 			$this->dbhandle->exec(
-			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
-				VALUES (1, 'Fanta', 'X3D Fanta Model', 'string_2', 'string_3','string_4','string_5'); " .
-			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
-				VALUES (2, 'Sprite', 'X3D Sprite Light Model', 'string_2', 'string_3','string_4','string_5'); " .
-			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
-				VALUES (3, 'Costa', 'X3D Costa Model', 'string_2', 'string_3','string_4','string_5'); ");
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelDescription) 
+				VALUES (1, 'Fanta', 'X3D Fanta Model', '3DS Max', '','string_4'); " .
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelDescription) 
+				VALUES (2, 'Sprite', 'X3D Sprite Light Model', 'string_2', 'string_3','string_4'); " .
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelDescription) 
+				VALUES (3, 'Costa', 'X3D Costa Model', 'string_2', 'string_3','string_4'); ");
 			return "X3D model data inserted successfully inside test1.db";
 		}
 		catch(PD0EXception $e) {
@@ -85,7 +85,6 @@ class Model {
 				$result[$i]['x3dModelTitle'] = $data['x3dModelTitle'];
 				$result[$i]['x3dCreationMethod'] = $data['x3dCreationMethod'];
 				$result[$i]['modelTitle'] = $data['modelTitle'];
-				$result[$i]['modelSubtitle'] = $data['modelSubtitle'];
 				$result[$i]['modelDescription'] = $data['modelDescription'];
 				//increment the row index
 				$i++;

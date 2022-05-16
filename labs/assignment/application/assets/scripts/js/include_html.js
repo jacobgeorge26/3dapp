@@ -22,7 +22,7 @@ function includeHTML() {
         }
         xhttp.open("GET", file, true);
         xhttp.send();
-        jQuery.getJSON('./assets/models/data.json');
+        jQuery.getJSON('./application/models/data.json');
         /* Exit the function: */
         return;
       }

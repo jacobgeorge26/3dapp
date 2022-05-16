@@ -17,12 +17,12 @@ var ids = {
     };
 
 $(document).ready(function(){
-    $.getJSON('./assets/models/data.json', function(jsonObj){
+    $.getJSON('./application/models/data.json', function(jsonObj){
     });
 });
 
 function getData(){
-    jQuery.getJSON('./assets/models/data.json', function(jsonObj){
+    jQuery.getJSON('./application/models/data.json', function(jsonObj){
         getHtml(jsonObj);
     });
 }
@@ -79,7 +79,7 @@ function getHtml(jsonObj){
 
 async function getNewCSS(){
     let promise = new Promise(function(resolve) {
-        resolve(jQuery.getJSON('./assets/models/data.json', function(jsonObj){
+        resolve(jQuery.getJSON('./application/models/data.json', function(jsonObj){
         }));
       });
     var css = await promise;
@@ -88,7 +88,7 @@ async function getNewCSS(){
 
 async function getOriginalCSS(){
     let promise = new Promise(function(resolve) {
-        resolve(jQuery.getJSON('./assets/models/data.json', function(jsonObj){
+        resolve(jQuery.getJSON('./application/models/data.json', function(jsonObj){
         }));
       });
     var css = await promise;
@@ -97,7 +97,7 @@ async function getOriginalCSS(){
 
 async function getUrl(index){
     let promise = new Promise(function(resolve) {
-        resolve(jQuery.getJSON('./assets/models/data.json', function(jsonObj){
+        resolve(jQuery.getJSON('./application/models/data.json', function(jsonObj){
         }));
       });
     var textures = await promise;
