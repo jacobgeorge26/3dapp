@@ -26,15 +26,27 @@
                     </a>
                 </li>
                 <li class="nav-item ms-auto">
-                    <a onclick="closeToggle()" class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
+                    <a onclick="closeToggle()" class="nav-link" href="#" data-toggle="modal" data-target="#extraModal">Deeper Understanding</a>
                 </li>
-                <li class="nav-item ms-auto">
-                    <a onclick="closeToggle()" class="nav-link" href="#" data-toggle="modal" data-target="#originalityModal">Originality</a>
+                <li class="nav-item dropdown ms-auto">
+                    <a class="nav-link dropdown-toggle" href='#' id="navbardrop" data-toggle="dropdown" aria-expanded="false">
+                    Info
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbardrop">
+                        <div>
+                            <li>
+                                <a class="dropdown-item" onclick="closeToggle()" class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" onclick="closeToggle()" class="nav-link" href="#" data-toggle="modal" data-target="#originalityModal">Originality</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" onclick="closeToggle()" class="nav-link" href="javascript:swap('references')">References</a>
+                            </li>
+                        </div>
+                    </ul>
                 </li>
-                <li class="nav-item ms-auto">
-                    <a onclick="closeToggle()" class="nav-link" href="javascript:swap('references')">References</a>
-                </li>
-            <li class="nav-item dropdown ms-auto">
+                <li class="nav-item dropdown ms-auto">
                     <a class="nav-link dropdown-toggle" href='#' id="navbardrop" data-toggle="dropdown" aria-expanded="false">
                     Drinks
                     </a>

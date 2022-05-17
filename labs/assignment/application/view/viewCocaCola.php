@@ -51,7 +51,7 @@ to-fit=no">
     </div>
 
         <!--SWITCH References Page-->
-        <div id="references" class="container main_contents" style="display:none;">
+        <div id="references" class="container model-container" style="display:none;">
         <div w3-include-html="./application/assets/pages/references.html"></div>        
     </div>
 

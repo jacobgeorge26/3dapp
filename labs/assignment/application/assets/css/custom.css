@@ -29,6 +29,10 @@ p.ref.title{
     font-style: italic;
 }
 
+table.references{
+    margin-top: 50px;
+}
+
 td.reference{
     display: flex;
 }
