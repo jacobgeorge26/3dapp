@@ -97,9 +97,10 @@ async function shuffleProduct(){
         var animation = document.getElementById('model' + getModelNo() + '__Texture' + i.toString());
         if(animation != null){
             texCount = texCount > Object.keys(url).length - 1 ? 0 : texCount;
-            var tex = url[texCount.toString()][i - 1];
-            isComp = tex.includes("pepsi") || isComp;
-            animation.setAttribute('url', tex);
+            var nextTexCount = texCount + 1 > Object.keys(url).length - 1 ? 0 : texCount + 1;
+            var nextTex = url[nextTexCount.toString()][i - 1];
+            isComp = nextTex.includes("pepsi") || isComp;
+            animation.setAttribute('url', url[texCount.toString()][i - 1]);
         }
     }
     if(isComp && !isWireframe){
