@@ -81,7 +81,7 @@ p.settings{
     text-align: center;
 }
 
-.card.home-card .card-text, .card.model-card .card-text{
+.card.home-card .card-text{
     max-height: 50px;
     overflow-y: hidden;
     margin: 5px 10px 5px 10px;
