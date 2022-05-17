@@ -169,8 +169,8 @@ async function getUrl(index){
 var dataModel1, dataModel2, dataModel3;
 async function getDBData(selection){
     let promise = new Promise(function(resolve) {
-        resolve(jQuery.getJSON('./application/models/modelDrinksDetails.php?brand=' + selection, function(json){
-            console.log('Web service response for drink brand data: ', json);
+        resolve(jQuery.getJSON('./application/models/getDBData.php?brand=' + selection, function(json){
+            console.log('DB data being loaded into page: ', json);
         }));
       });
     var data = await promise.then(function(value) {
