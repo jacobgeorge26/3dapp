@@ -7,14 +7,11 @@
     <Viewpoint DEF='Back' description='Back' orientation='0 -1 0 -1.571' position='160 33 0' fieldOfView='0.6024'/>
     <Viewpoint DEF='Above' description='Above' orientation='0.3693 0.8528 0.3693 -1.729' position='-72.18 125.1 -0.8051' fieldOfView='0.6024'/>
     <Viewpoint DEF='Below' description='Below' orientation='0.3919 -0.8301 0.3967 -4.515' position='-64.51 -61.33 -0.8051' fieldOfView='0.6024'/>
-    <Transform DEF='model1' rotation='0 1 0 -1.292' scale='0.5517 0.5517 0.5517' translation='0 5 0'>
-      <TimeSensor DEF='Rotation1' cycleInterval='1.967' loop='true' enabled='false'/>
-      <PositionInterpolator DEF='Rot1-POS-INTERP' key='0 0.05085 0.1017 0.1525 0.2034 0.2542 0.3051 0.3559 0.4068 0.4576 0.5085 0.5593 0.6102 0.661 0.7119 0.7627 0.8136 0.8644 0.9153 0.9661 1' keyValue='0 5 0 0 5.504 0 0 6.2 0 0 6.8 0 0 7.496 0 0 8 0 0 7.496 0 0 6.8 0 0 6.2 0 0 5.6 0 0 5 0 0 4.4 0 0 3.8 0 0 3.2 0 0 2.504 0 0 2 0 0 2.504 0 0 3.2 0 0 3.8 0 0 4.496 0 0 4.928 0'/>
-      <OrientationInterpolator DEF='Rot1-ROT-INTERP' key='0 0.05085 0.1017 0.1525 0.2034 0.2542 0.3051 0.3559 0.4068 0.4576 0.5085 0.5593 0.6102 0.661 0.7119 0.7627 0.8136 0.8644 0.9153 0.9661 1' keyValue='0 1 0 -1.292 0 1 0 -1.028 0 1 0 -0.664 0 1 0 -0.3499 0 1 0 -0.0357 0 -1 0 -0.2785 0 -1 0 -0.5926 0 -1 0 -0.9068 0 -1 0 -1.221 0 -1 0 -1.535 0 -1 0 -1.849 0 -1 0 -2.163 0 -1 0 -2.478 0 -1 0 -2.792 0 -1 0 -3.106 0 -1 0 -3.42 0 -1 0 -3.734 0 -1 0 -4.048 0 1 0 -1.921 0 1 0 -1.556 0 1 0 -1.33'/>
-	  <TimeSensor DEF='Topple1' cycleInterval='1.967' loop='false' enabled='true'/>
-      <PositionInterpolator DEF='Top1-POS-INTERP' key='0 0.05085 0.1017 0.1525 0.2034 0.2542 0.3051 0.3559 0.4068 0.4576 0.5085 0.5593 0.6102 0.661 0.7119 0.7627 0.8136 0.8644 0.9153 0.9661 1' keyValue='0 5 0 0 5.546 0.9545 0 6.995 3.163 0 9.06 5.642 0 12.83 7.731 0 16.86 9.905 0 17.12 12.14 0 17.28 14.35 0 17.36 16.45 0 17.39 18.35 0 17.39 19.96 -0.03407 17.39 21.42 -0.1265 17.39 22.88 -0.2628 17.39 24.32 -0.4283 17.39 25.7 -0.6083 17.39 26.96 -0.7884 17.39 28.08 -0.9539 17.39 29.02 -1.09 17.39 29.74 -1.183 17.39 30.2 -1.213 17.39 30.35'/>
-      <OrientationInterpolator DEF='Top1-ROT-INTERP' key='0 0.05085 0.1017 0.1525 0.2034 0.2542 0.3051 0.3559 0.4068 0.4576 0.5085 0.5593 0.6102 0.661 0.7119 0.7627 0.8136 0.8644 0.9153 0.9661 1' keyValue='0 -1 0 -4.167 0.02176 -0.9985 -0.05101 -4.109 0.06809 -0.9854 -0.1564 -3.984 0.1043 -0.9607 -0.2573 -3.858 0.09626 -0.9304 -0.3538 -3.74 0.08747 -0.8839 -0.4594 -3.628 0.07153 -0.8473 -0.5263 -3.537 0.04769 -0.8039 -0.5928 -3.421 0.02207 -0.7589 -0.6509 -3.289 -0.005648 -0.7218 -0.6921 -3.161 0.04124 0.7056 0.7074 -3.227 -0.1005 -0.7041 -0.7029 -2.986 -0.1877 -0.7027 -0.6863 -2.94 -0.2913 -0.7018 -0.6501 -2.915 -0.3983 -0.7015 -0.591 -2.906 -0.4963 -0.7018 -0.5111 -2.91 -0.5758 -0.7024 -0.4184 -2.922 -0.6326 -0.7031 -0.3248 -2.938 -0.6674 -0.7038 -0.2434 -2.955 -0.6849 -0.7043 -0.1868 -2.968 -0.6895 -0.7045 -0.1683 -2.973'/>
-	  <Shape>
+    <Transform DEF='CokeCan' rotation='0 1 0 -1.292' scale='0.5517 0.5517 0.5517' translation='0 5 0'>
+		<TimeSensor DEF='CokeCan-TIMER' cycleInterval='1.967' loop='true' enabled ='true'/>
+		<PositionInterpolator DEF='CokeCan-POS-INTERP' key='0 0.05085 0.1017 0.1525 0.2034 0.2542 0.3051 0.3559 0.4068 0.4576 0.5085 0.5593 0.6102 0.661 0.7119 0.7627 0.8136 0.8644 0.9153 0.9661 1' keyValue='0 5 0 0 5.546 0.9545 0 6.995 3.163 0 9.06 5.642 0 12.83 7.731 0 16.86 9.905 0 17.12 12.14 0 17.28 14.35 0 17.36 16.45 0 17.39 18.35 0 17.39 19.96 -0.03407 17.39 21.42 -0.1265 17.39 22.88 -0.2628 17.39 24.32 -0.4283 17.39 25.7 -0.6083 17.39 26.96 -0.7884 17.39 28.08 -0.9539 17.39 29.02 -1.09 17.39 29.74 -1.183 17.39 30.2 -1.213 17.39 30.35'/>
+		<OrientationInterpolator DEF='CokeCan-ROT-INTERP' key='0 0.05085 0.1017 0.1525 0.2034 0.2542 0.3051 0.3559 0.4068 0.4576 0.5085 0.5593 0.6102 0.661 0.7119 0.7627 0.8136 0.8644 0.9153 0.9661 1' keyValue='0 -1 0 -4.167 0.02176 -0.9985 -0.05101 -4.109 0.06809 -0.9854 -0.1564 -3.984 0.1043 -0.9607 -0.2573 -3.858 0.09626 -0.9304 -0.3538 -3.74 0.08747 -0.8839 -0.4594 -3.628 0.07153 -0.8473 -0.5263 -3.537 0.04769 -0.8039 -0.5928 -3.421 0.02207 -0.7589 -0.6509 -3.289 -0.005648 -0.7218 -0.6921 -3.161 0.04124 0.7056 0.7074 -3.227 -0.1005 -0.7041 -0.7029 -2.986 -0.1877 -0.7027 -0.6863 -2.94 -0.2913 -0.7018 -0.6501 -2.915 -0.3983 -0.7015 -0.591 -2.906 -0.4963 -0.7018 -0.5111 -2.91 -0.5758 -0.7024 -0.4184 -2.922 -0.6326 -0.7031 -0.3248 -2.938 -0.6674 -0.7038 -0.2434 -2.955 -0.6849 -0.7043 -0.1868 -2.968 -0.6895 -0.7045 -0.1683 -2.973'/>
+		<Shape>
         <Appearance>
           <Material ambientIntensity='1' diffuseColor='0.588 0.588 0.588' shininess='0.145'/>
           <ImageTexture DEF='Texture1' url='"./textures/fanta-label.jpg"'/>
@@ -27,14 +24,10 @@
       </Shape>
       <TouchSensor DEF='model1Sensor-SENSOR'/>
     </Transform>
-    <ROUTE fromNode='Rotation1' fromField='fraction_changed' toNode='Rot1-POS-INTERP' toField='set_fraction'/>
-    <ROUTE fromNode='Rot1-POS-INTERP' fromField='value_changed' toNode='model1' toField='set_translation'/>
-    <ROUTE fromNode='Rotation1' fromField='fraction_changed' toNode='Rot1-ROT-INTERP' toField='set_fraction'/>
-    <ROUTE fromNode='Rot1-ROT-INTERP' fromField='value_changed' toNode='model1' toField='set_rotation'/>
-    <ROUTE fromNode='model1Sensor-SENSOR' fromField='touchTime' toNode='Topple1' toField='set_startTime'/>
-	<ROUTE fromNode='Topple1' fromField='fraction_changed' toNode='Top1-POS-INTERP' toField='set_fraction'/>
-    <ROUTE fromNode='Top1-POS-INTERP' fromField='value_changed' toNode='model1' toField='set_translation'/>
-    <ROUTE fromNode='Topple1' fromField='fraction_changed' toNode='Top1-ROT-INTERP' toField='set_fraction'/>
-    <ROUTE fromNode='Top1-ROT-INTERP' fromField='value_changed' toNode='model1' toField='set_rotation'/>
+    <ROUTE fromNode='CokeCan-TIMER' fromField='fraction_changed' toNode='CokeCan-POS-INTERP' toField='set_fraction'/>
+    <ROUTE fromNode='CokeCan-POS-INTERP' fromField='value_changed' toNode='CokeCan' toField='set_translation'/>
+    <ROUTE fromNode='CokeCan-TIMER' fromField='fraction_changed' toNode='CokeCan-ROT-INTERP' toField='set_fraction'/>
+    <ROUTE fromNode='CokeCan-ROT-INTERP' fromField='value_changed' toNode='CokeCan' toField='set_rotation'/>
+	<ROUTE fromNode='CokeSensor-SENSOR' fromField='touchTime' toNode='CokeCan-TIMER' toField='set_startTime'/>
   </Scene>
 </X3D>
