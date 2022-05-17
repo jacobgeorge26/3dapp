@@ -50,6 +50,11 @@ to-fit=no">
         <div w3-include-html="./application/assets/pages/model.html"></div>        
     </div>
 
+        <!--SWITCH References Page-->
+        <div id="references" class="container main_contents" style="display:none;">
+        <div w3-include-html="./application/assets/pages/references.html"></div>        
+    </div>
+
     <br>
 
     <!--Footer-->

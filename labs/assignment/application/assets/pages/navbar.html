@@ -26,13 +26,13 @@
                     </a>
                 </li>
                 <li class="nav-item ms-auto">
-                    <a onclick="closeToggle()" class="nav-link" href="#">Contact</a>
+                    <a onclick="closeToggle()" class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
                 </li>
                 <li class="nav-item ms-auto">
-                    <a onclick="closeToggle()" class="nav-link" href="#">Originality</a>
+                    <a onclick="closeToggle()" class="nav-link" href="#" data-toggle="modal" data-target="#originalityModal">Originality</a>
                 </li>
                 <li class="nav-item ms-auto">
-                    <a onclick="closeToggle()" class="nav-link" href="#">References</a>
+                    <a onclick="closeToggle()" class="nav-link" href="javascript:swap('references')">References</a>
                 </li>
             <li class="nav-item dropdown ms-auto">
                     <a class="nav-link dropdown-toggle" href='#' id="navbardrop" data-toggle="dropdown" aria-expanded="false">
@@ -45,4 +45,5 @@
             </ul>
         </div> 
     </div> 
+    <div w3-include-html="./application/assets/pages/modals.html"></div>
 </nav>
