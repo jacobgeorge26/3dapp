@@ -92,12 +92,21 @@ async function shuffleProduct(){
     texCount++;
     var index = getModelNo();
     var url = await getUrl(index);
+    var isComp = false;
     for(var i=1;i<=noTextures[getModelNo()];i++){
         var animation = document.getElementById('model' + getModelNo() + '__Texture' + i.toString());
         if(animation != null){
             texCount = texCount > Object.keys(url).length - 1 ? 0 : texCount;
-            animation.setAttribute('url', url[texCount.toString()][i - 1]);
+            var tex = url[texCount.toString()][i - 1];
+            isComp = tex.includes("pepsi") || isComp;
+            animation.setAttribute('url', tex);
         }
+    }
+    if(isComp && !isWireframe){
+        $('#texture').attr('data-target', '#compModal');
+    }
+    else{
+        $('#texture').removeAttr('data-target');
     }
 }
 
