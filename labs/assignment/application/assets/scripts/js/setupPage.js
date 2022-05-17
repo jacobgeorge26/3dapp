@@ -13,7 +13,10 @@ function swap(selected)
     document.getElementById("texture").onclick=async ()=>{ shuffleProduct()};
 }
 
+var data;
 function loadPage(){
+    var selection = $(this).text();
+    getTextData(selection);
     setTimeout(function(){
         swap('home');
         document.getElementById("restyle").click(true);
@@ -73,6 +76,11 @@ function closeToggle(){
     if(isOpen){
         toggle.click();
     }
+}
+
+async function getTextData(selection){
+    var data = await getDBData(selection);
+    return data;
 }
 
 

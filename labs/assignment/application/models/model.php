@@ -29,7 +29,7 @@ class Model {
 	public function dbCreateTable()
 	{
 		try {
-			$this->dbhandle->exec("CREATE TABLE Model_3D (Id INTEGER PRIMARY KEY, brand TEXT, x3dModelTitle TEXT, x3dCreationMethod TEXT, modelTitle TEXT, modelDescription TEXT)");
+			$this->dbhandle->exec("CREATE TABLE Model_3D (Id INTEGER PRIMARY KEY, brand TEXT, x3dCreationMethod TEXT,  modelDescription TEXT)");
 			return "Model_3D table is successfully created inside test1.db file";
 		}
 		catch (PD0EXception $e){
@@ -51,12 +51,12 @@ class Model {
 	{
 		try{
 			$this->dbhandle->exec(
-			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelDescription) 
-				VALUES (1, 'Fanta', 'X3D Fanta Model', '3DS Max', '','string_4'); " .
-			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelDescription) 
-				VALUES (2, 'Sprite', 'X3D Sprite Light Model', 'string_2', 'string_3','string_4'); " .
-			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelDescription) 
-				VALUES (3, 'Costa', 'X3D Costa Model', 'string_2', 'string_3','string_4'); ");
+			"INSERT INTO Model_3D (Id, brand, x3dCreationMethod, modelDescription) 
+				VALUES (1, 'Fanta', 'The Fanta model has been created in 3DS Max and exported to VRML. This has then been converted to X3D using InstantReality.', 'Bright, bubbly, instantly refreshing and great tasting. Fanta Orange is made with 100% natural flavours, fruit juice and is caffeine free.'); " .
+			"INSERT INTO Model_3D (Id, brand, x3dCreationMethod, modelDescription) 
+				VALUES (2, 'Sprite','The Sprite model has been created in 3DS Max and exported to VRML. This has then been converted to X3D using InstantReality.', 'Sprite is a crisp, refreshing and clean-tasting lemon and lime-flavoured soft drink.'); " .
+			"INSERT INTO Model_3D (Id, brand, x3dCreationMethod, modelDescription) 
+				VALUES (3, 'Costa', 'The Costa model has been created in Blender and exported to X3D and FBX. The FBX file has been imported into 3DS Max to add animation, then exported to VRML. This has been converted to X3D using InstantReality and the relevant animation lines added to the Blender X3D files.', 'Our classic Americano has been expertly crafted by our Master of Coffee.  Made with less sugar to release the full flavour of our Signature Mocha Italia beans, for your deliciously intense Costa Coffee on the go.'); ");
 			return "X3D model data inserted successfully inside test1.db";
 		}
 		catch(PD0EXception $e) {
@@ -82,9 +82,7 @@ class Model {
 				// echo '</br>' . $data['x3dModelTitle'];
 				// Write the database conetnts to the results array for sending back to the view
 				$result[$i]['brand'] = $data['brand']; // Not used in the view, instead using the fake dbGetBrand() function above
-				$result[$i]['x3dModelTitle'] = $data['x3dModelTitle'];
 				$result[$i]['x3dCreationMethod'] = $data['x3dCreationMethod'];
-				$result[$i]['modelTitle'] = $data['modelTitle'];
 				$result[$i]['modelDescription'] = $data['modelDescription'];
 				//increment the row index
 				$i++;

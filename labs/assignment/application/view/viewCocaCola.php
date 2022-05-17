@@ -57,5 +57,10 @@ to-fit=no">
     <script>
         includeHTML();
     </script>
+    <script>
+    $(document).ready(function(){
+
+    });
+  </script>
   </body>
 </html>

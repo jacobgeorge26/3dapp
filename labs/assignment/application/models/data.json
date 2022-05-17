@@ -6,15 +6,15 @@
 		},
 		{
 			"title": "Fanta",	
-			"description": "INSERT FANTA DESCRIPTION HERE"
+			"description": "Bright, bubbly, instantly refreshing and great tasting. Fanta Orange is made with 100% natural flavours, fruit juice and is caffeine free."
 		},
 		{
 			"title": "Sprite",		
-			"description": "INSERT SPRITE DESCRIPTION HERE"
+			"description": "Sprite is a crisp, refreshing and clean-tasting lemon and lime-flavoured soft drink."
 		},
 		{
 			"title": "Costa",
-			"description": "INSERT COSTA DESCRIPTION HERE"
+			"description": "Our classic Americano has been expertly crafted by our Master of Coffee.  Made with less sugar to release the full flavour of our Signature Mocha Italia beans, for your deliciously intense Costa Coffee on the go."
 		},
 		{
 			"mainRepo": "https://github.com/jacobgeorge26/3dapp",
@@ -51,9 +51,9 @@
 			"--dark-hover": "#0ea2b5"
 		},
 		{
-			"x3d1":"Insert info about model 1 here",
-			"x3d2":"Insert info about model 2 here",
-			"x3d3":"Insert info about model 3 here"
+			"x3d1":"The Fanta model has been created in 3DS Max and exported to VRML. This has then been converted to X3D using InstantReality.",
+			"x3d2":"The Sprite model has been created in 3DS Max and exported to VRML. This has then been converted to X3D using InstantReality.",
+			"x3d3":"The Costa model has been created in Blender and exported to X3D and FBX. The FBX file has been imported into 3DS Max to add animation, then exported to VRML. This has been converted to X3D using InstantReality and the relevant animation lines added to the Blender X3D files."
 		},
 		{
 			"0":["./textures/fanta-label.jpg"],
