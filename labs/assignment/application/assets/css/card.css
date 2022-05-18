@@ -1,0 +1,221 @@
+#model-container, #model_gallery {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#settings-container{
+    height: auto;
+    width: 100%;
+    display: inherit;
+    justify-content: space-evenly;
+}
+#left, #right{
+    width:50%;
+    padding: 0px 2px 2px 0px;
+}
+#col1, #col2, #col3{
+    width:33%;
+    padding: 0px 2px 2px 0px;
+}
+#render-container, #animation-container, #camera-container{
+    height: auto;
+    padding: 0px 5px 5px 0px;
+    width:100%;
+    padding-right:10px;
+} 
+#model-settings{
+    margin-top:-13px;
+    z-index: 1;
+    padding-top:10px;
+}
+#model-body{
+    height: auto;
+    width: 100%;
+    display: inline;
+}
+#model-main, #model-settings{
+    width:100%;
+}
+
+.card.home-card, .card.model-card{
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.card.home-card .card-body, .card.model-card .card-body, .card.model-card .card-footer{
+    border: 1px solid var(--background-secondary);
+    background-color: var(--background-secondary);
+    margin: 0px;
+    margin-top: -2px;
+    padding-top: 0px;
+    border-bottom-left-radius: var(--rounding);
+    border-bottom-right-radius: var(--rounding);
+    border: 1px solid var(--text);
+    border-top: none;
+}
+
+.card.model-card .card-footer{
+    z-index: 1;
+    margin-top: -5px;
+}
+
+.card.model-card .card-body{
+    padding:0px;
+}
+
+p.settings{
+    font-size:medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card.model-card .card-header{
+    border: 1px solid var(--background-secondary);
+    background-color: var(--background);
+    border-top-left-radius: var(--rounding);
+    border-top-right-radius: var(--rounding);
+    border: 1px solid var(--text);
+    text-align: center;
+}
+
+.card.home-card .card-text{
+    max-height: 50px;
+    overflow-y: hidden;
+    margin: 5px 10px 5px 10px;
+}
+
+.card.home-card .img-thumbnail, .card.model-card .img-thumbnail{
+    background-color: transparent;
+    border: none;
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: var(--rounding);
+    border-top-right-radius: var(--rounding);
+    padding: 0px;
+    border: 1px solid var(--text);
+    border-bottom: none;
+}
+.card.model-card .gallery-img{
+    background-color: transparent;
+    border: none;
+    max-width: 100%;
+    height: auto;
+    padding: 0px;
+}
+
+
+#info1, #info2, #info3{
+    float: right;
+}
+
+#touchSensor{
+    text-align: center;
+    font-style: italic;
+}
+
+.btn.btn-primary{
+    background-color: var(--background);
+    border: none;
+    color:var(--text);
+    margin: 5px;  
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    max-height: max-content;
+    font-size:14px;
+}
+
+.card-text, .card-title{
+    color:var(--text);
+    margin-left:10px;
+    margin-top:5px;
+}
+
+.card.home-card .btn-primary:hover, .card.model-card .btn-primary:hover, .btn.btn-primary:hover{
+    background-color: var(--background);
+    color:var(--dark-hover);
+}
+
+.card.home-card .btn-primary:focus, .card.model-card .btn-primary:focus, .btn.btn-primary:focus {
+    background-color: var(--background);
+    color: var(--dark-hover);
+    outline: none!important;
+    border:none;
+    box-shadow: none;
+}
+
+@media (min-width: 576px) { 
+    #settings-container {
+        width: 100%;
+        display: flex;
+    }
+    #model-main, #model-settings{
+        width:100%;
+    }
+}
+
+@media (min-width: 768px) { 
+    #model-body{
+        height: auto;
+        width: 100%;
+        display: flex;
+    }
+    #settings-container{
+        display: inherit;
+    }
+    #model-main{
+        width:70%;
+        border-bottom-right-radius: 0px;
+        border-right: none;
+    }
+    #model-settings{
+        width:30%;
+        border-bottom-left-radius: 0px;
+        border-left:none;
+        margin-top:-2px;
+        border-top:none;
+    }
+    #render-container, #animation-container, #camera-container{
+        width:100%;
+        padding-right:10px;
+    } 
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .card.home-card, .card.model-card{
+        margin-bottom: 40px;
+    }
+    #settings-container {
+        width: 100%;
+        display: flex;
+    }
+    #model-main{
+        width:50%;
+        border-bottom-right-radius: 0px;
+        border-right: none;
+    }
+    #model-settings{
+        width:50%;
+        border-bottom-left-radius: 0px;
+        border-left:none;
+        margin-top:-2px;
+        border-top:none;
+    }
+    #render-container, #animation-container, #camera-container{
+        padding: 0px 5px 5px 0px;
+        width:30%;
+        margin-right:3%;
+    } 
+}
+@media (min-width: 1200px) { 
+    #model-main{
+        width:60%;
+
+    }
+    #model-settings{
+        width:40%;
+    }
+} 

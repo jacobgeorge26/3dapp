@@ -1,0 +1,78 @@
+{
+    "pageTextData": [
+		{
+			"title": "Coca Cola Great Britain",	
+			"description": "The Coca Cola Company is the world's leading manufacturer, marketer and distributor of non-alcoholic beverage concentrates and syrups, and produces nearly 400 brands."
+		},
+		{
+			"title": "Fanta",	
+			"description": "Bright, bubbly, instantly refreshing and great tasting. Fanta Orange is made with 100% natural flavours, fruit juice and is caffeine free."
+		},
+		{
+			"title": "Sprite",		
+			"description": "Sprite is a crisp, refreshing and clean-tasting lemon and lime-flavoured soft drink."
+		},
+		{
+			"title": "Costa",
+			"description": "Our classic Americano has been expertly crafted by our Master of Coffee.  Made with less sugar to release the full flavour of our Signature Mocha Italia beans, for your deliciously intense Costa Coffee on the go."
+		},
+		{
+			"mainRepo": "https://github.com/jacobgeorge26/3dapp",
+			"archive": "#",
+			"models": "#"
+		},
+		{
+			"brand1":"Fanta",
+			"brand2":"Sprite",
+			"brand3":"Costa"
+		},
+		{
+			"img1":"./application/assets/images/fanta.jpg",
+			"img2":"./application/assets/images/sprite.jpg",
+			"img3":"./application/assets/images/costa.jpg"
+		},
+		{
+			"info1":"https://www.coca-cola.co.uk/brands/fanta",
+			"info2":"https://www.coca-cola.co.uk/brands/sprite",
+			"info3":"https://www.coca-cola.co.uk/brands/costa-coffee"
+		},
+		{
+			"--background": "#a6b5bc",
+			"--background-secondary": "#cddcdc",
+			"--text": "black",
+			"--hover": "#a6b5bc",
+			"--dark-hover": "#0a7d8c"
+		},
+		{
+			"--background": "#0a3755",
+			"--background-secondary": "#3c5a82",
+			"--text": "white",
+			"--hover": "#0a3755",
+			"--dark-hover": "#0ea2b5"
+		},
+		{
+			"x3d1":"The Fanta model has been created in 3DS Max and exported to VRML. This has then been converted to X3D using InstantReality.",
+			"x3d2":"The Sprite model has been created in 3DS Max and exported to VRML. This has then been converted to X3D using InstantReality.",
+			"x3d3":"The Costa model has been created in Blender and exported to X3D and FBX. The FBX file has been imported into 3DS Max to add animation, then exported to VRML. This has been converted to X3D using InstantReality and the relevant animation lines added to the Blender X3D files."
+		},
+		{
+			"0":["./textures/fanta-label.jpg"],
+			"1":["./textures/coke-label.jpg"],
+			"2":["./textures/pepper-can.jpg"],
+			"3":["./textures/sprite-can.jpg"]
+		},
+		{
+			"0":["./textures/sprite-label.jpg", "./textures/sprite-plastic.jpg", "./textures/sprite-cap.jpg", "./textures/sprite-plastic.jpg"],
+			"1":["./textures/pepper-label.jpg", "./textures/pepper-plastic.jpg", "./textures/pepper-cap.jpg", "./textures/pepper-plastic.jpg"]
+		},
+		{
+			"0":["./textures/costa-paper.jpg", "./textures/costa-label.jpg"],
+			"1":["./textures/costa-paper.jpg", "./textures/pepsi-label.png"],
+			"2":["./textures/costa-paper.jpg", "./textures/sprite-cup.jpg"]
+		},
+		{
+			"0":"./textures/wireframe-dark.jpg",
+			"1":"./textures/wireframe-light.jpg"
+		}
+	]
+}
