@@ -18,8 +18,8 @@
 		},
 		{
 			"mainRepo": "https://github.com/jacobgeorge26/3dapp",
-			"archive": "#",
-			"models": "#"
+			"archive": "https://github.com/jacobgeorge26/3dapp/tree/main/labs/assignment/application/assets/archive",
+			"models": "https://github.com/jacobgeorge26/3dapp/tree/main/labs/assignment/application/assets/x3d"
 		},
 		{
 			"brand1":"Fanta",
