@@ -21,7 +21,7 @@ function loadPage(){
     setTimeout(function(){
         swap('home');
         document.getElementById("restyle").click(true);
-    }, 500);    
+    }, 600);    
 }
 
 $(document).ready(function() {
