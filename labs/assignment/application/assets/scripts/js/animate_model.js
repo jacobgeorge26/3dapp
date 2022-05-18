@@ -18,6 +18,7 @@ function resetWireframe(){
 }
 
 function resetModel(){
+    resetFalling();
     rotateModel(true);
     toggleLight(true);
     resetCamera();
@@ -25,8 +26,8 @@ function resetModel(){
 
 var isRunning = false;
 var noRotations = { "1": 1, "2": 4, "3": 1};
-function rotateModel(fixedOn = false){
-    isRunning = fixedOn ? true : !isRunning;
+function rotateModel(overrideRunning = null){
+    isRunning = overrideRunning != null && overrideRunning ? true : !isRunning;
     for(var i=1;i<=noRotations[getModelNo()];i++){
         var animation = document.getElementById('model' + getModelNo() + '__Rotation' + i.toString());     
         animation.setAttribute('enabled', isRunning.toString());
@@ -63,6 +64,40 @@ function switchPlayButton(){
         $('#fast').attr('disabled','disabled');
         $('#slow').attr('disabled','disabled');
     }
+}
+
+var isFalling = false;
+function fallOver(){
+    isFalling = !isFalling;
+    if(isFalling){
+        rotateModel(false);
+        $('#playAnimation').attr('disabled','disabled');
+        for(var i=1;i<=noRotations[getModelNo()];i++){
+            var animation = document.getElementById('model' + getModelNo() + '__Topple' + i.toString());     
+            animation.setAttribute('enabled', 'true');
+        }
+         $('#touchSensor').show();
+    }
+    else{
+        for(var i=1;i<=noRotations[getModelNo()];i++){
+            var animation = document.getElementById('model' + getModelNo() + '__Topple' + i.toString());     
+            animation.setAttribute('enabled', 'false');
+        }
+        $('#touchSensor').hide();
+        $('#playAnimation').removeAttr('disabled');
+        rotateModel(true);
+    }
+
+}
+
+function resetFalling(){
+    isFalling = false;
+    for(var i=1;i<=noRotations[getModelNo()];i++){
+        var animation = document.getElementById('model' + getModelNo() + '__Topple' + i.toString());     
+        animation.setAttribute('enabled', 'false');
+    }
+    $('#touchSensor').hide();
+    $('#playAnimation').removeAttr('disabled');
 }
 
 function changeCamera(camera){

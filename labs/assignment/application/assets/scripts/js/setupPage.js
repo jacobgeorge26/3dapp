@@ -27,7 +27,7 @@ function loadPage(){
 $(document).ready(function() {
     setTimeout(function(){
         selectModel(modelNo, true);
-    }, 600);	
+    }, 750);	
 });
 
 var modelNo = 1;

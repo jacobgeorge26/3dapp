@@ -25,6 +25,7 @@
                             </scene>
                         </x3d>
                     </div>
+                    <p id="touchSensor">Click the label to knock the product over!</p>
                 </div>
                 <!--Settings section-->
                 <div class="card-body" id="model-settings">
@@ -46,7 +47,7 @@
                         <!--Animation-->
                         <div id="animation-container">
                             <p class="settings">Animation</p>
-                            <a class="btn btn-primary">Fall Over</a>
+                            <a class="btn btn-primary" onclick="fallOver()">Fall Over</a>
                             <div id="model-container">
                                 <div id="col1">
                                     <a id="slow" onclick="adjustSpeed(0.5)" class="btn btn-primary"><i class="fa fa-step-backward fa-2x"></i></a>

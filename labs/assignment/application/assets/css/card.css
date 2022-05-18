@@ -111,6 +111,11 @@ p.settings{
     float: right;
 }
 
+#touchSensor{
+    text-align: center;
+    font-style: italic;
+}
+
 .btn.btn-primary{
     background-color: var(--background);
     border: none;
