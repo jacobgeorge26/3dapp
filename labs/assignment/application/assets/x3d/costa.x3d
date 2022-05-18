@@ -13,9 +13,12 @@
     <Viewpoint DEF='Below' description='Below' orientation='0.3947 -0.3947 0.8297 -1.756' position='197.7 67 169.2' fieldOfView='0.5876'/>
     <Transform DEF='Circle' rotation='0 0 0 -2.91' scale='39.37 39.37 39.37' translation='0 60 0'>
 		<TimeSensor DEF='Rotation1' cycleInterval='2' loop='true' enabled='false'/>
+		<TimeSensor DEF='Topple1' cycleInterval='2' loop='true' enabled='false'/>
 		<PositionInterpolator DEF='Circle-POS-INTERP' key='0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1' keyValue='0 60 0 0 60 -2.52 0 60 -6 0 60 -9 0 60 -12.48 0 60 -15 0 60 -12.48 0 60 -9 0 60 -6 0 60 -3 0 60 0 0 60 3 0 60 6 0 60 9 0 60 12.48 0 60 15 0 60 12.48 0 60 9 0 60 6 0 60 2.52 0 60 0'/>
 		<OrientationInterpolator DEF='Circle-ROT-INTERP' key='0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1' keyValue='0 -1 0 -2.91 0.08002 -0.9967 0.009315 -2.911 0.2607 -0.9649 0.03035 -2.918 0.4492 -0.8919 0.05229 -2.935 0.5864 -0.8071 0.06827 -2.954 0.7047 -0.7047 0.08204 -2.978 -0.8055 0.5852 -0.09376 -3.278 -0.8863 0.4516 -0.1032 -3.247 -0.9453 0.3071 -0.11 -3.213 -0.9812 0.1554 -0.1142 -3.178 -0.9933 0 -0.1156 -3.142 -0.9812 -0.1554 -0.1142 -3.105 -0.9453 -0.3071 -0.11 -3.07 -0.8863 -0.4516 -0.1032 -3.037 -0.8055 -0.5852 -0.09376 -3.006 -0.7047 -0.7047 -0.08204 -2.978 -0.5864 -0.8071 -0.06827 -2.954 -0.4492 -0.8919 -0.05229 -2.935 -0.2607 -0.9649 -0.03035 -2.918 -0.08002 -0.9967 -0.009316 -2.911 0 -1 0 -2.91'/>      <Shape>
-        <Appearance>
+      <PositionInterpolator DEF='Top1-POS-INTERP' key='0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1' keyValue='0 60 0 0 59.22 -1.9 0 55.94 -5.699 0 48.73 -8.549 -0.1797 36.46 -8.437 -1.047 20.13 -6.796 -2.486 1.672 -4.291 -4.333 -16.99 -1.441 -6.424 -33.94 1.236 -8.594 -47.25 3.223 -10.68 -55.01 4 -12.92 -58.93 4 -15.56 -62.07 4 -18.45 -64.52 4 -21.45 -66.35 4 -24.4 -67.67 4 -27.14 -68.55 4 -29.54 -69.09 4 -31.44 -69.36 4 -32.69 -69.47 4 -33.14 -69.48 4'/>
+      <OrientationInterpolator DEF='Top1-ROT-INTERP' key='0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5' keyValue='0 -1 0 -2.91 0.002421 -1 0.009448 -2.91 0.007669 -0.9992 0.04013 -2.911 0.01277 -0.9954 0.09542 -2.911 0.01641 -0.9835 0.1801 -2.916 0.02307 -0.956 0.2925 -2.934 0.03435 -0.9096 0.4141 -2.955 0.04922 -0.8485 0.527 -2.97 0.06455 -0.7843 0.617 -2.977 0.07638 -0.7334 0.6755 -2.977 0.08105 -0.713 0.6964 -2.976'/>
+		<Appearance>
           <Material ambientIntensity='1' diffuseColor='0.588 0.588 0.588' shininess='0.145'/>
 		  <ImageTexture DEF='Texture1' url='"./textures/costa-paper.jpg"'/>
         </Appearance>
@@ -49,5 +52,10 @@
     <ROUTE fromNode='Circle-POS-INTERP' fromField='value_changed' toNode='Circle' toField='set_translation'/>
     <ROUTE fromNode='Rotation1' fromField='fraction_changed' toNode='Circle-ROT-INTERP' toField='set_fraction'/>
     <ROUTE fromNode='Circle-ROT-INTERP' fromField='value_changed' toNode='Circle' toField='set_rotation'/>
+	
+	<ROUTE fromNode='Topple1' fromField='fraction_changed' toNode='Top1-POS-INTERP' toField='set_fraction'/>
+    <ROUTE fromNode='Top1-POS-INTERP' fromField='value_changed' toNode='Circle' toField='set_translation'/>
+    <ROUTE fromNode='Topple1' fromField='fraction_changed' toNode='Top1-ROT-INTERP' toField='set_fraction'/>
+    <ROUTE fromNode='Top1-ROT-INTERP' fromField='value_changed' toNode='Circle' toField='set_rotation'/>
   </Scene>
 </X3D>
