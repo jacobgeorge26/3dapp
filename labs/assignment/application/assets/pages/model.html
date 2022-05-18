@@ -32,7 +32,7 @@
                     <div id="settings-container">
                         <!--Rendering-->
                         <div id="render-container">
-                            <p class="settings">Rendering</p>
+                            <p class="settings" id="settings-title">Rendering</p>
                             <a onclick="toggleWireframe()"class="btn btn-primary">Toggle Wireframe</a>
                             <div id="model-container">
                                 <div id="left">
@@ -46,7 +46,7 @@
     
                         <!--Animation-->
                         <div id="animation-container">
-                            <p class="settings">Animation</p>
+                            <p class="settings" id="settings-title">Animation</p>
                             <a class="btn btn-primary" onclick="fallOver()">Fall Over</a>
                             <div id="model-container">
                                 <div id="col1">
@@ -65,7 +65,7 @@
                         </div>
                         <!--Camera-->
                         <div id="camera-container">
-                            <p class="settings">Viewpoint</p>
+                            <p class="settings" id="settings-title">Viewpoint</p>
                             <div id="model-container">                               
                                 <div id="left">
                                     <a id="Front" onclick="changeCamera('Front')" disabled="disabled" class="btn btn-primary">Front</a>
